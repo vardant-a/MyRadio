@@ -11,7 +11,12 @@ final class MainTabBarController: UITabBarController {
     
     // MARK: - Private Properties
     
-    private let settingsViewController = ViewController()
+    private let settingsViewController: SettingsViewController = {
+        let viewModel = SettingsViewModel()
+        let viewControllet = SettingsViewController(viewModel: viewModel)
+        
+        return viewControllet
+    }()
     
     // MARK: - Life Cycles Methods
     
