@@ -15,11 +15,9 @@ final class SettingsViewController: UIViewController {
     
     private var settings: [SettingsSection] = [] {
         didSet {
-            DispatchQueue.main.async {
-                self.settings.forEach {
-                    $0.cells.forEach {
-                        $0.register(with: self.settingsTableView)
-                    }
+            settings.forEach {
+                $0.cells.forEach {
+                    $0.register(with: settingsTableView)
                 }
             }
         }
@@ -36,7 +34,6 @@ final class SettingsViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.backgroundColor = .clear
-        tableView.register(ProfileCell.self, forCellReuseIdentifier: "profile")
         
         return tableView
     }()
@@ -82,8 +79,12 @@ final class SettingsViewController: UIViewController {
     // MARK: - UITableViewDataSource
 
 extension SettingsViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         settings.count
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        settings[section].cells.count
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -95,9 +96,8 @@ extension SettingsViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cellType = settings[indexPath.section].cells[indexPath.row].cellSelf
         let cell = settings[indexPath.section].cells[indexPath.row]
-            .dequeue(cellType, with: tableView, indexPath: indexPath)
+            .dequeue(for: tableView, at: indexPath)
         
         return cell
     }
@@ -106,4 +106,7 @@ extension SettingsViewController: UITableViewDataSource {
     // MARK: - UITableViewDelegate
 
 extension SettingsViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return settings[indexPath.section].cells[indexPath.row].height
+    }
 }
