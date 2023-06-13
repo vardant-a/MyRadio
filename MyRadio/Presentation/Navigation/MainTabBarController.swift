@@ -11,7 +11,12 @@ final class MainTabBarController: UITabBarController {
     
     // MARK: - Private Properties
     
-    private let settingsViewController = ViewController()
+    private let settingsViewController: SettingsViewController = {
+        let viewModel = SettingsViewModel()
+        let viewController = SettingsViewController(viewModel: viewModel)
+        
+        return viewController
+    }()
     
     // MARK: - Life Cycles Methods
     
@@ -35,9 +40,9 @@ final class MainTabBarController: UITabBarController {
     private func setupTabBarStyle() {
         let tabBarAppearance = UITabBar.appearance()
         
-        tabBarAppearance.tintColor = .orange
-        tabBarAppearance.unselectedItemTintColor = .lightGray
-        tabBarAppearance.barTintColor = Colors.mainTabNavBarColor
-        tabBarAppearance.backgroundColor = Colors.mainTabNavBarColor
+        tabBarAppearance.tintColor = Colors.BasicColorSet.acceptColor
+        tabBarAppearance.unselectedItemTintColor = Colors.BasicColorSet.unselectedColor
+        tabBarAppearance.barTintColor = Colors.BasicColorSet.mainColor
+        tabBarAppearance.backgroundColor = Colors.BasicColorSet.mainColor
     }
 }
