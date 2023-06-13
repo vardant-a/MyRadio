@@ -26,6 +26,9 @@
 		0E575C6D2A39021200AA2E82 /* SwitchCellBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E575C6C2A39021200AA2E82 /* SwitchCellBuilder.swift */; };
 		0E575C712A39073C00AA2E82 /* ButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E575C702A39073C00AA2E82 /* ButtonCell.swift */; };
 		0E575C742A3908B500AA2E82 /* ButtonCellBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E575C732A3908B500AA2E82 /* ButtonCellBuilder.swift */; };
+		0E575C762A3916E400AA2E82 /* ImageLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E575C752A3916E400AA2E82 /* ImageLabelCell.swift */; };
+		0E575C782A3916FA00AA2E82 /* ImageLabelCellBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E575C772A3916FA00AA2E82 /* ImageLabelCellBuilder.swift */; };
+		0E575C7A2A391DB600AA2E82 /* UIColor+EX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E575C792A391DB600AA2E82 /* UIColor+EX.swift */; };
 		0E8F8F3C2A3523720009CBF6 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8F8F3B2A3523720009CBF6 /* AppSettings.swift */; };
 		0E8F8F3E2A3527000009CBF6 /* AppStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8F8F3D2A3527000009CBF6 /* AppStyle.swift */; };
 /* End PBXBuildFile section */
@@ -52,6 +55,9 @@
 		0E575C6C2A39021200AA2E82 /* SwitchCellBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchCellBuilder.swift; sourceTree = "<group>"; };
 		0E575C702A39073C00AA2E82 /* ButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCell.swift; sourceTree = "<group>"; };
 		0E575C732A3908B500AA2E82 /* ButtonCellBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCellBuilder.swift; sourceTree = "<group>"; };
+		0E575C752A3916E400AA2E82 /* ImageLabelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLabelCell.swift; sourceTree = "<group>"; };
+		0E575C772A3916FA00AA2E82 /* ImageLabelCellBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLabelCellBuilder.swift; sourceTree = "<group>"; };
+		0E575C792A391DB600AA2E82 /* UIColor+EX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+EX.swift"; sourceTree = "<group>"; };
 		0E8F8F3B2A3523720009CBF6 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
 		0E8F8F3D2A3527000009CBF6 /* AppStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -177,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				0E48CF692A2EA7A9009228DF /* UIView+EX.swift */,
+				0E575C792A391DB600AA2E82 /* UIColor+EX.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -212,6 +219,8 @@
 		0E575C6F2A3906FD00AA2E82 /* ImageLabelCell */ = {
 			isa = PBXGroup;
 			children = (
+				0E575C752A3916E400AA2E82 /* ImageLabelCell.swift */,
+				0E575C772A3916FA00AA2E82 /* ImageLabelCellBuilder.swift */,
 			);
 			path = ImageLabelCell;
 			sourceTree = "<group>";
@@ -292,6 +301,7 @@
 				0E48CF6A2A2EA7A9009228DF /* UIView+EX.swift in Sources */,
 				0E48CF5A2A2E9C6E009228DF /* MainTabBarController.swift in Sources */,
 				0E48CF6E2A2F30F9009228DF /* TestMenu.swift in Sources */,
+				0E575C7A2A391DB600AA2E82 /* UIColor+EX.swift in Sources */,
 				0E575C6D2A39021200AA2E82 /* SwitchCellBuilder.swift in Sources */,
 				0E8F8F3C2A3523720009CBF6 /* AppSettings.swift in Sources */,
 				0E575C622A38977E00AA2E82 /* CollectionCellBuilder.swift in Sources */,
@@ -300,9 +310,11 @@
 				0E575C712A39073C00AA2E82 /* ButtonCell.swift in Sources */,
 				0E48CF5F2A2EA1B2009228DF /* SettingsViewController.swift in Sources */,
 				0E8F8F3E2A3527000009CBF6 /* AppStyle.swift in Sources */,
+				0E575C762A3916E400AA2E82 /* ImageLabelCell.swift in Sources */,
 				0E575C742A3908B500AA2E82 /* ButtonCellBuilder.swift in Sources */,
 				0E575C662A3898A700AA2E82 /* CollectionCell.swift in Sources */,
 				0E575C6B2A38FE9400AA2E82 /* SwitchCell.swift in Sources */,
+				0E575C782A3916FA00AA2E82 /* ImageLabelCellBuilder.swift in Sources */,
 				0E48CF632A2EA562009228DF /* SettingsSection.swift in Sources */,
 				0E48CF612A2EA3C1009228DF /* SettingsViewModel.swift in Sources */,
 			);

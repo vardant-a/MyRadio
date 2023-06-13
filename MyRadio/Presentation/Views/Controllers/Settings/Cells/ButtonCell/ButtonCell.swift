@@ -29,9 +29,9 @@ final class ButtonCell: UITableViewCell {
     
     // MARK: - Public Methods
     
-    func setupCell(_ buttonColor: UIColor, title: String) {
+    func setupCell(title: String, titleColor: UIColor, buttonColor: UIColor) {
         button.setTitle(title, for: .normal)
-//        button.tintColor = buttonColor
+        button.setTitleColor(titleColor, for: .normal)
         button.backgroundColor = buttonColor
     }
     

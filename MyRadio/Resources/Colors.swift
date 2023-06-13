@@ -8,26 +8,65 @@
 import UIKit
 
 enum Colors {
-    static let mainTabNavBarColor: UIColor = .white
+    enum BasicColorSet {
+        static var acceptColor = UIColor { trait in
+            if trait.userInterfaceStyle == .dark {
+                return .orange
+            } else {
+                return .systemBlue
+            }
+        }
+        
+        static var secondColor = UIColor { trait in
+            if trait.userInterfaceStyle == .dark {
+                return UIColor(hexString: "FFFFFF")
+            } else {
+                return UIColor(hexString: "#000000")
+            }
+        }
+        
+        static var unselectedColor = UIColor { trait in
+            if trait.userInterfaceStyle == .dark {
+                return .lightGray
+            } else {
+                return .darkGray
+            }
+        }
+        
+        static var mainColor = UIColor { trait in
+            if trait.userInterfaceStyle == .dark {
+                return UIColor(hexString: "#1C1C1E")
+            } else {
+                return UIColor(hexString: "FFFFFF")
+            }
+        }
+        
+        static var offColor = UIColor { trait in
+            if trait.userInterfaceStyle == .dark {
+                return UIColor(hexString: "#000000")
+            } else {
+                return UIColor(hexString: "#F2F2F7")
+            }
+        }
+    }
 }
 
 var colors: [AppStyleModel] = [
     AppStyleModel(
         title: "Bacis",
-        mainColor: .black,
-        acceptColor: .gray,
-        secondColor: .white),
-    AppStyleModel(
-        title: "Pro",
-        mainColor: .red,
-        acceptColor: .green,
-        secondColor: .orange),
-        ]
+        acceptColor: Colors.BasicColorSet.acceptColor,
+        secondColor: Colors.BasicColorSet.secondColor,
+        unselectedColor: Colors.BasicColorSet.unselectedColor,
+        mainColor: Colors.BasicColorSet.mainColor,
+        offColor: Colors.BasicColorSet.offColor)
+]
 
 
 struct AppStyleModel {
     let title: String
-    let mainColor: UIColor
-    let acceptColor: UIColor
-    let secondColor: UIColor
+    var acceptColor: UIColor
+    var secondColor: UIColor
+    var unselectedColor: UIColor
+    var mainColor: UIColor
+    var offColor: UIColor
 }

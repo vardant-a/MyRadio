@@ -29,7 +29,7 @@ extension ButtonCellBuilder: SettingsCell {
     
     func dequeue(for tableView: UITableView, at indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as? ButtonCell else { return UITableViewCell() }
-        cell.setupCell(.systemRed, title: title)
+        cell.setupCell(title: "Log Out", titleColor: .white, buttonColor: .systemRed)
         
         return cell
     }

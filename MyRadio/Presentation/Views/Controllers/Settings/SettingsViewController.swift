@@ -33,7 +33,6 @@ final class SettingsViewController: UIViewController {
         tableView.isScrollEnabled = false
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.backgroundColor = .clear
         
         return tableView
     }()

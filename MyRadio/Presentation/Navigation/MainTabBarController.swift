@@ -23,6 +23,7 @@ final class MainTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViewControllers()
+        setupTabBarStyle()
     }
     
     // MARK: - Private Methods
@@ -36,12 +37,12 @@ final class MainTabBarController: UITabBarController {
         viewControllers = [settingsViewController]
     }
     
-    private func setupTabBarStyle(_ setColor: AppStyleModel) {
+    private func setupTabBarStyle() {
         let tabBarAppearance = UITabBar.appearance()
         
-        tabBarAppearance.tintColor = setColor.acceptColor
-        tabBarAppearance.unselectedItemTintColor = setColor.secondColor
-        tabBarAppearance.barTintColor = setColor.mainColor
-        tabBarAppearance.backgroundColor = setColor.mainColor
+        tabBarAppearance.tintColor = Colors.BasicColorSet.acceptColor
+        tabBarAppearance.unselectedItemTintColor = Colors.BasicColorSet.unselectedColor
+        tabBarAppearance.barTintColor = Colors.BasicColorSet.mainColor
+        tabBarAppearance.backgroundColor = Colors.BasicColorSet.mainColor
     }
 }

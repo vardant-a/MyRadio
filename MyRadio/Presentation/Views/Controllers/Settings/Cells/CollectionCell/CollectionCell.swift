@@ -9,10 +9,12 @@ import UIKit
 
 final class CollectionCell: UITableViewCell {
     
+    private var itemsPerRow = 3
+    
     private var layout: UICollectionViewFlowLayout = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
-
+        
         return layout
     }()
     
@@ -71,7 +73,7 @@ final class CollectionCell: UITableViewCell {
 
 extension CollectionCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        3
+        itemsPerRow
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -109,7 +111,7 @@ extension CollectionCell: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let heightCell = collectionView.frame.height - (2 * LocalConstants.verticalOffset)
-        let widthCell = (collectionView.frame.width - (4 * LocalConstants.horizontalOffset)) / 3
+        let widthCell = (collectionView.frame.width - (2 * LocalConstants.horizontalOffset) - LocalConstants.horizontalOffset) / 3
 
         return CGSize(width: widthCell, height: heightCell)
     }

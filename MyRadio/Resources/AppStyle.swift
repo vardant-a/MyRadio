@@ -15,22 +15,22 @@ extension AppSettings {
 }
 
 extension AppSettings.AppStyle {
-    func getAppStyle() -> AppStyleModel {
-        switch self {
-        case .basic:
-            return AppStyleModel(
-                title: "Bacis",
-                mainColor: .black,
-                acceptColor: .orange,
-                secondColor: .white)
-        case .pro:
-            return AppStyleModel(
-                title: "Pro",
-                mainColor: .red,
-                acceptColor: .yellow,
-                secondColor: .orange)
-        }
-    }
+//    func getAppStyle() -> AppStyleModel {
+//        switch self {
+//        case .basic:
+//            return AppStyleModel(
+//                title: "Bacis",
+//                acceptColor: .black,
+//                secondColor: .orange,
+//                mainColor: .white, secondBasicColor: <#UIColor#>)
+//        case .pro:
+//            return AppStyleModel(
+//                title: "Pro",
+//                acceptColor: .red,
+//                secondColor: .yellow,
+//                mainColor: .orange)
+//        }
+//    }
     
     func setupAppStyle(_ index: Int) {
         UserDefaults.standard.set(index, forKey: AppSettingsKey.appStyle)

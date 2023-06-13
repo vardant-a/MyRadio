@@ -9,6 +9,11 @@ import Foundation
 
 let testSettings: [SettingsSection] = [
     SettingsSection(
+        footer: "Settings profile",
+        cells: [
+            ImageLabelCellBuilder(cellID: "ProfileCell")
+        ]),
+    SettingsSection(
         header: "Appearance",
         footer: "Create ",
         cells: [
