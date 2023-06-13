@@ -63,10 +63,12 @@ final class ImageLabelCell: UITableViewCell {
             selectedImageView.leadingAnchor.constraint(
                 equalTo: contentView.leadingAnchor,
                 constant: LocalConstants.horizontalOffset),
-            selectedImageView.heightAnchor.constraint(
-                equalToConstant: contentView.frame.height * 0.8),
             selectedImageView.widthAnchor.constraint(
-                equalToConstant: contentView.frame.height * 0.8)
+                equalToConstant: 70),
+            selectedImageView.heightAnchor.constraint(
+                equalToConstant: 70),
+            selectedImageView.centerYAnchor.constraint(
+                equalTo: contentView.centerYAnchor)
         ])
     }
     
@@ -75,7 +77,8 @@ final class ImageLabelCell: UITableViewCell {
             label.centerYAnchor.constraint(
                 equalTo: contentView.centerYAnchor),
             label.leadingAnchor.constraint(
-                equalTo: contentView.centerXAnchor),
+                equalTo: selectedImageView.trailingAnchor,
+                constant: LocalConstants.horizontalOffset),
             label.trailingAnchor.constraint(
                 equalTo: contentView.trailingAnchor,
                 constant: -LocalConstants.horizontalOffset)
