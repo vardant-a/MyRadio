@@ -20,7 +20,7 @@ final class ButtonCellBuilder {
 
 extension ButtonCellBuilder: SettingsCell {
     var height: CGFloat {
-        34
+        44
     }
     
     func register(with tableView: UITableView) {
@@ -29,7 +29,7 @@ extension ButtonCellBuilder: SettingsCell {
     
     func dequeue(for tableView: UITableView, at indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as? ButtonCell else { return UITableViewCell() }
-        cell.setupCell(title: "Log Out", titleColor: .white, buttonColor: .systemRed)
+        cell.setupCell(title: title, titleColor: .systemRed, buttonColor: Colors.ClasicColorSet.mainColor)
         
         return cell
     }

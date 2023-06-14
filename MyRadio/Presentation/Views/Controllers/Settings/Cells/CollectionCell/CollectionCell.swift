@@ -9,7 +9,9 @@ import UIKit
 
 final class CollectionCell: UITableViewCell {
     
-    private var itemsPerRow = 3
+    // MARK: - Private Properties
+    
+    private var colorSets: [ColorSet] = colors
     
     private var layout: UICollectionViewFlowLayout = {
         let layout = UICollectionViewFlowLayout()
@@ -25,7 +27,8 @@ final class CollectionCell: UITableViewCell {
     private lazy var cellCollectionView: UICollectionView = {
         let collectionView = UICollectionView(
             frame: .zero, collectionViewLayout: layout)
-        collectionView.register(AppStyleCell.self, forCellWithReuseIdentifier: AppStyleCell.cellID)
+        collectionView.register(
+            AppStyleCell.self, forCellWithReuseIdentifier: AppStyleCell.cellID)
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.dataSource = self
         collectionView.delegate = self
@@ -73,17 +76,17 @@ final class CollectionCell: UITableViewCell {
 
 extension CollectionCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        itemsPerRow
+        colorSets.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView
             .dequeueReusableCell(withReuseIdentifier: AppStyleCell.cellID, for: indexPath) as? AppStyleCell else { return UICollectionViewCell() }
-        print("init cell")
-        let selectedIndex = AppSettings.shared.appStyle
+        cell.configureCell(colorSets[indexPath.item])
         
+        let selectedIndex = AppSettings.shared.appStyle
         cell.isSelected = indexPath.item == selectedIndex
-        print(cell.isSelected)
+        
         return cell
     }
 }

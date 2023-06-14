@@ -13,14 +13,16 @@ final class ImageLabelCell: UITableViewCell {
     
     private var selectedImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.backgroundColor = .orange
+        imageView.image = UIImage(systemName: "person.crop.circle")
+        imageView.tintColor = Colors.ClasicColorSet.unselectedColor
+        imageView.clipsToBounds = true
         
         return imageView
     }()
     
     private var label: UILabel = {
         let label = UILabel()
-        label.textColor = Colors.BasicColorSet.secondColor
+        label.textColor = Colors.ClasicColorSet.secondColor
         
         return label
     }()
@@ -29,7 +31,7 @@ final class ImageLabelCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        contentView.backgroundColor = Colors.BasicColorSet.mainColor
+        contentView.backgroundColor = Colors.ClasicColorSet.mainColor
         contentView.addSubviews(selectedImageView, label)
         setupLayout()
     }

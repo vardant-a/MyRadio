@@ -102,7 +102,6 @@
 			children = (
 				0E48CF532A2E987C009228DF /* Application */,
 				0E48CF552A2E9C28009228DF /* Presentation */,
-				0E48CF4D2A2E9862009228DF /* Info.plist */,
 				0E48CF542A2E988E009228DF /* Resources */,
 			);
 			path = MyRadio;
@@ -114,6 +113,7 @@
 				0E48CF3F2A2E9861009228DF /* AppDelegate.swift */,
 				0E48CF412A2E9861009228DF /* SceneDelegate.swift */,
 				0E48CF4A2A2E9862009228DF /* LaunchScreen.storyboard */,
+				0E48CF4D2A2E9862009228DF /* Info.plist */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -489,7 +489,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = G56833V6RD;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MyRadio/Info.plist;
+				INFOPLIST_FILE = MyRadio/Application/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -499,7 +499,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "vardant-it.MyRadio";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -520,7 +520,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = G56833V6RD;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MyRadio/Info.plist;
+				INFOPLIST_FILE = MyRadio/Application/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -530,7 +530,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "vardant-it.MyRadio";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

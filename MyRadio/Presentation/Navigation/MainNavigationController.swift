@@ -28,14 +28,14 @@ final class MainNavigationController: UINavigationController {
     
     private func configureNavController() {
         let navBarAppearance = UINavigationBarAppearance()
-        navBarAppearance.backgroundColor = Colors.BasicColorSet.mainColor
+        navBarAppearance.backgroundColor = Colors.ClasicColorSet.mainColor
         navBarAppearance.shadowColor = .clear
         navBarAppearance.titleTextAttributes = [
-            .foregroundColor: Colors.BasicColorSet.secondColor]
+            .foregroundColor: Colors.ClasicColorSet.secondColor]
         navBarAppearance.largeTitleTextAttributes = [
-            .foregroundColor: Colors.BasicColorSet.secondColor]
+            .foregroundColor: Colors.ClasicColorSet.secondColor]
 
-        UINavigationBar.appearance().tintColor = Colors.BasicColorSet.acceptColor
+        UINavigationBar.appearance().tintColor = Colors.ClasicColorSet.acceptColor
         UINavigationBar.appearance().prefersLargeTitles = true
         UINavigationBar.appearance().standardAppearance = navBarAppearance
         UINavigationBar.appearance().scrollEdgeAppearance = navBarAppearance
