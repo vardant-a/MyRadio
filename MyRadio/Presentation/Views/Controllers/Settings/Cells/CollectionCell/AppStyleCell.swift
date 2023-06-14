@@ -14,11 +14,10 @@ final class AppStyleCell: UICollectionViewCell {
     override var isSelected: Bool {
         didSet {
             if isSelected {
-                contentView.layer.borderWidth = 4.0
+                contentView.layer.borderWidth = 2.0
                 contentView.layer.borderColor = Colors.BasicColorSet.acceptColor.cgColor
             } else {
-                contentView.layer.borderWidth = 4.0
-                contentView.layer.borderColor = UIColor.clear.cgColor
+                contentView.layer.borderWidth = 0.0
             }
         }
     }

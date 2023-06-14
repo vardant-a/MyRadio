@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		0E48CF402A2E9861009228DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E48CF3F2A2E9861009228DF /* AppDelegate.swift */; };
 		0E48CF422A2E9861009228DF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E48CF412A2E9861009228DF /* SceneDelegate.swift */; };
-		0E48CF442A2E9861009228DF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E48CF432A2E9861009228DF /* ViewController.swift */; };
 		0E48CF492A2E9862009228DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E48CF482A2E9862009228DF /* Assets.xcassets */; };
 		0E48CF4C2A2E9862009228DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E48CF4A2A2E9862009228DF /* LaunchScreen.storyboard */; };
 		0E48CF5A2A2E9C6E009228DF /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E48CF592A2E9C6E009228DF /* MainTabBarController.swift */; };
@@ -29,6 +28,10 @@
 		0E575C762A3916E400AA2E82 /* ImageLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E575C752A3916E400AA2E82 /* ImageLabelCell.swift */; };
 		0E575C782A3916FA00AA2E82 /* ImageLabelCellBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E575C772A3916FA00AA2E82 /* ImageLabelCellBuilder.swift */; };
 		0E575C7A2A391DB600AA2E82 /* UIColor+EX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E575C792A391DB600AA2E82 /* UIColor+EX.swift */; };
+		0E575C7E2A392BC000AA2E82 /* AllStationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E575C7D2A392BC000AA2E82 /* AllStationsViewController.swift */; };
+		0E575C802A392C0900AA2E82 /* MusicListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E575C7F2A392C0900AA2E82 /* MusicListViewController.swift */; };
+		0E575C822A392C6500AA2E82 /* AllStationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E575C812A392C6500AA2E82 /* AllStationsViewModel.swift */; };
+		0E575C842A392F8900AA2E82 /* MusicListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E575C832A392F8900AA2E82 /* MusicListViewModel.swift */; };
 		0E8F8F3C2A3523720009CBF6 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8F8F3B2A3523720009CBF6 /* AppSettings.swift */; };
 		0E8F8F3E2A3527000009CBF6 /* AppStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8F8F3D2A3527000009CBF6 /* AppStyle.swift */; };
 /* End PBXBuildFile section */
@@ -37,7 +40,6 @@
 		0E48CF3C2A2E9861009228DF /* MyRadio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyRadio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E48CF3F2A2E9861009228DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0E48CF412A2E9861009228DF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0E48CF432A2E9861009228DF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0E48CF482A2E9862009228DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0E48CF4B2A2E9862009228DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0E48CF4D2A2E9862009228DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -58,6 +60,10 @@
 		0E575C752A3916E400AA2E82 /* ImageLabelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLabelCell.swift; sourceTree = "<group>"; };
 		0E575C772A3916FA00AA2E82 /* ImageLabelCellBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLabelCellBuilder.swift; sourceTree = "<group>"; };
 		0E575C792A391DB600AA2E82 /* UIColor+EX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+EX.swift"; sourceTree = "<group>"; };
+		0E575C7D2A392BC000AA2E82 /* AllStationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllStationsViewController.swift; sourceTree = "<group>"; };
+		0E575C7F2A392C0900AA2E82 /* MusicListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicListViewController.swift; sourceTree = "<group>"; };
+		0E575C812A392C6500AA2E82 /* AllStationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllStationsViewModel.swift; sourceTree = "<group>"; };
+		0E575C832A392F8900AA2E82 /* MusicListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicListViewModel.swift; sourceTree = "<group>"; };
 		0E8F8F3B2A3523720009CBF6 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
 		0E8F8F3D2A3527000009CBF6 /* AppStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -142,7 +148,8 @@
 		0E48CF572A2E9C45009228DF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				0E48CF432A2E9861009228DF /* ViewController.swift */,
+				0E575C7B2A392B3000AA2E82 /* AllStations */,
+				0E575C7C2A392B3B00AA2E82 /* MusicList */,
 				0E48CF5D2A2EA19C009228DF /* Settings */,
 			);
 			path = Controllers;
@@ -225,6 +232,24 @@
 			path = ImageLabelCell;
 			sourceTree = "<group>";
 		};
+		0E575C7B2A392B3000AA2E82 /* AllStations */ = {
+			isa = PBXGroup;
+			children = (
+				0E575C7D2A392BC000AA2E82 /* AllStationsViewController.swift */,
+				0E575C812A392C6500AA2E82 /* AllStationsViewModel.swift */,
+			);
+			path = AllStations;
+			sourceTree = "<group>";
+		};
+		0E575C7C2A392B3B00AA2E82 /* MusicList */ = {
+			isa = PBXGroup;
+			children = (
+				0E575C7F2A392C0900AA2E82 /* MusicListViewController.swift */,
+				0E575C832A392F8900AA2E82 /* MusicListViewModel.swift */,
+			);
+			path = MusicList;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -295,11 +320,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E48CF442A2E9861009228DF /* ViewController.swift in Sources */,
 				0E48CF5C2A2E9F15009228DF /* Colors.swift in Sources */,
 				0E48CF402A2E9861009228DF /* AppDelegate.swift in Sources */,
 				0E48CF6A2A2EA7A9009228DF /* UIView+EX.swift in Sources */,
 				0E48CF5A2A2E9C6E009228DF /* MainTabBarController.swift in Sources */,
+				0E575C842A392F8900AA2E82 /* MusicListViewModel.swift in Sources */,
 				0E48CF6E2A2F30F9009228DF /* TestMenu.swift in Sources */,
 				0E575C7A2A391DB600AA2E82 /* UIColor+EX.swift in Sources */,
 				0E575C6D2A39021200AA2E82 /* SwitchCellBuilder.swift in Sources */,
@@ -311,8 +336,11 @@
 				0E48CF5F2A2EA1B2009228DF /* SettingsViewController.swift in Sources */,
 				0E8F8F3E2A3527000009CBF6 /* AppStyle.swift in Sources */,
 				0E575C762A3916E400AA2E82 /* ImageLabelCell.swift in Sources */,
+				0E575C822A392C6500AA2E82 /* AllStationsViewModel.swift in Sources */,
+				0E575C7E2A392BC000AA2E82 /* AllStationsViewController.swift in Sources */,
 				0E575C742A3908B500AA2E82 /* ButtonCellBuilder.swift in Sources */,
 				0E575C662A3898A700AA2E82 /* CollectionCell.swift in Sources */,
+				0E575C802A392C0900AA2E82 /* MusicListViewController.swift in Sources */,
 				0E575C6B2A38FE9400AA2E82 /* SwitchCell.swift in Sources */,
 				0E575C782A3916FA00AA2E82 /* ImageLabelCellBuilder.swift in Sources */,
 				0E48CF632A2EA562009228DF /* SettingsSection.swift in Sources */,
