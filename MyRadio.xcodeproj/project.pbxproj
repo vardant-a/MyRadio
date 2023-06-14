@@ -32,6 +32,7 @@
 		0E575C802A392C0900AA2E82 /* MusicListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E575C7F2A392C0900AA2E82 /* MusicListViewController.swift */; };
 		0E575C822A392C6500AA2E82 /* AllStationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E575C812A392C6500AA2E82 /* AllStationsViewModel.swift */; };
 		0E575C842A392F8900AA2E82 /* MusicListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E575C832A392F8900AA2E82 /* MusicListViewModel.swift */; };
+		0E6F66BF2A399E0F00310F95 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6F66BE2A399E0F00310F95 /* MainNavigationController.swift */; };
 		0E8F8F3C2A3523720009CBF6 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8F8F3B2A3523720009CBF6 /* AppSettings.swift */; };
 		0E8F8F3E2A3527000009CBF6 /* AppStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8F8F3D2A3527000009CBF6 /* AppStyle.swift */; };
 /* End PBXBuildFile section */
@@ -64,6 +65,7 @@
 		0E575C7F2A392C0900AA2E82 /* MusicListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicListViewController.swift; sourceTree = "<group>"; };
 		0E575C812A392C6500AA2E82 /* AllStationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllStationsViewModel.swift; sourceTree = "<group>"; };
 		0E575C832A392F8900AA2E82 /* MusicListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicListViewModel.swift; sourceTree = "<group>"; };
+		0E6F66BE2A399E0F00310F95 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		0E8F8F3B2A3523720009CBF6 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
 		0E8F8F3D2A3527000009CBF6 /* AppStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -159,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				0E48CF592A2E9C6E009228DF /* MainTabBarController.swift */,
+				0E6F66BE2A399E0F00310F95 /* MainNavigationController.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -344,6 +347,7 @@
 				0E575C6B2A38FE9400AA2E82 /* SwitchCell.swift in Sources */,
 				0E575C782A3916FA00AA2E82 /* ImageLabelCellBuilder.swift in Sources */,
 				0E48CF632A2EA562009228DF /* SettingsSection.swift in Sources */,
+				0E6F66BF2A399E0F00310F95 /* MainNavigationController.swift in Sources */,
 				0E48CF612A2EA3C1009228DF /* SettingsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

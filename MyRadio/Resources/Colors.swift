@@ -13,7 +13,7 @@ enum Colors {
             if trait.userInterfaceStyle == .dark {
                 return .orange
             } else {
-                return .systemBlue
+                return UIColor(hexString: "#5A55D5")
             }
         }
         
@@ -27,9 +27,9 @@ enum Colors {
         
         static var unselectedColor = UIColor { trait in
             if trait.userInterfaceStyle == .dark {
-                return .lightGray
-            } else {
                 return .darkGray
+            } else {
+                return .lightGray
             }
         }
         

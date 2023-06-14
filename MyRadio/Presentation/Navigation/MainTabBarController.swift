@@ -43,22 +43,40 @@ final class MainTabBarController: UITabBarController {
     // MARK: - Private Methods
     
     private func setupViewControllers() {
-        allStationsViewController.tabBarItem = UITabBarItem(
-            title: "All Stations",
+        let allStationsVC = getCompletedController(
+            allStationsViewController,
+            title: "Radio Stations",
             image: UIImage(systemName: "radio"),
             selectedImage: UIImage(systemName: "radio.fill"))
         
-        musicListViewController.tabBarItem = UITabBarItem(
+        let musicListVC = getCompletedController(
+            musicListViewController,
             title: "Musics",
             image: UIImage(systemName: "line.3.horizontal.circle"),
             selectedImage: UIImage(systemName: "line.3.horizontal.circle.fill"))
         
-        settingsViewController.tabBarItem = UITabBarItem(
+        let settingsVC = getCompletedController(
+            settingsViewController,
             title: "Settings",
             image: UIImage(systemName: "gear"),
             selectedImage: UIImage(systemName: "gear"))
         
-        viewControllers = [allStationsViewController, musicListViewController, settingsViewController]
+        viewControllers = [allStationsVC, musicListVC, settingsVC]
+    }
+    
+    private func getCompletedController(_ view: UIViewController, title: String, image: UIImage?, selectedImage: UIImage?) -> UINavigationController {
+        guard let image = image, let selectedImage = selectedImage else {
+            return UINavigationController()
+        }
+        
+        let readyController = MainNavigationController(rootViewController: view)
+        view.title = title
+        readyController.tabBarItem = UITabBarItem(
+            title: title,
+            image: image,
+            selectedImage: selectedImage)
+        
+        return readyController
     }
     
     private func setupTabBarStyle() {

@@ -33,6 +33,7 @@ final class SettingsViewController: UIViewController {
         tableView.isScrollEnabled = false
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.backgroundColor = .clear
         
         return tableView
     }()
@@ -53,10 +54,26 @@ final class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         settings = testSettings
-        view.backgroundColor = .brown
-        view.addSubview(settingsTableView)
-        settingsTableView.translatesAutoresizingMaskIntoConstraints = false
+        configureNavigationController()
+        view.backgroundColor = Colors.BasicColorSet.offColor
+        view.addSubviews(settingsTableView)
         setupLayout()
+    }
+    
+    // MARK: - Private Methods
+    
+    private func configureNavigationController() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(
+            image: UIImage(systemName: "info.circle"),
+            style: .plain,
+            target: self,
+            action: #selector(tuppedRightBarButtonItem))
+    }
+    
+    // MARK: - Objc Methods
+    
+    @objc private func tuppedRightBarButtonItem() {
+        print("tupped")
     }
     
     // MARK: - Layout
@@ -79,11 +96,11 @@ final class SettingsViewController: UIViewController {
 
 extension SettingsViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        settings.count
+        return settings.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        settings[section].cells.count
+        return settings[section].cells.count
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {

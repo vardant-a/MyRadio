@@ -18,7 +18,7 @@ final class ImageLabelCellBuilder {
 
 extension ImageLabelCellBuilder: SettingsCell {
     var height: CGFloat {
-        100
+        60
     }
     
     func register(with tableView: UITableView) {
