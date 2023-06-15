@@ -46,6 +46,7 @@ final class AppStyleCell: UICollectionViewCell {
         super.init(frame: frame)
         contentView.addSubviews(
             headerView, headerLabel, cellView, footerView, iconView)
+        contentView.clipsToBounds = true
         setupLayout()
     }
     

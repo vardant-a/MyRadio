@@ -1,0 +1,28 @@
+//
+
+/* ViewController */
+
+"ViewController.radioStationsTitle" = "Radio Stations";
+"ViewController.musicsTitle" = "Musics";
+"ViewController.settingsTitle" = "Settings";
+
+/* Settings */
+
+"Settings.sectionGeneral.header" = "General";
+"Settings.sectionGeneral.footer" = "";
+
+"Settings.sectionAppearance.header" = "Appearance";
+"Settings.sectionAppearance.systemMode" = "System Mode";
+"Settings.sectionAppearance.darkMode" = "Dark Mode";
+"Settings.sectionAppearance.footer" = "Customise the appearance of applications for yourself to get the most pleasure of using it.";
+
+"Settings.sectionOther.resetButton" = "Reset";
+"Settings.sectionOther.footer" = "When you press the reset button, the data will be deleted, and access to your favorite radio stations and saved tracks will be lost.";
+
+/* ColorSet */
+
+"ColorSet.systemTitle" = "System";
+"ColorSet.customTitle" = "Custom";
+"ColorSet.oceanTitle" = "Ocean";
+
+//

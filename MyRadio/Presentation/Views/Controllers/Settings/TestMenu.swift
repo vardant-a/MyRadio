@@ -9,21 +9,28 @@ import Foundation
 
 let testSettings: [SettingsSection] = [
     SettingsSection(
-        header: " ",
+        header: Localizable.Settings.General.header,
         cells: [
-            ImageLabelCellBuilder(cellID: "ProfileCell")
+            ModelCellBuilder(cellID: "first", title: "1"),
         ]),
     SettingsSection(
-        header: "Appearance",
-        footer: "Create ",
+        header: Localizable.Settings.Appearance.header,
+        footer: Localizable.Settings.Appearance.footer,
         cells: [
-            SwitchCellBuilder(cellID: "SystemMode", title: "System mode"),
-            SwitchCellBuilder(cellID: "DarkMode", title: "Dark mode"),
+            SwitchCellBuilder(
+                cellID: "SystemMode",
+                title: Localizable.Settings.Appearance.systemMode),
+            SwitchCellBuilder(
+                cellID: "DarkMode",
+                title: Localizable.Settings.Appearance.darkMode),
+            ModelCellBuilder(cellID: "second", title: "2"),
             CollectionCellBuilder(cellID: "AppStyle")
         ]),
     SettingsSection(
-        footer: "Click button for exit",
+        footer: Localizable.Settings.Other.footer,
         cells: [
-            ButtonCellBuilder(cellID: "LogOut", title: "Log Out")
+            ButtonCellBuilder(
+                cellID: "Reset",
+                title: Localizable.Settings.Other.resetButton)
         ])
 ]

@@ -28,7 +28,9 @@ extension SwitchCellBuilder: SettingsCell {
     }
     
     func dequeue(for tableView: UITableView, at indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as? SwitchCell else { return UITableViewCell() }
+        guard let cell = tableView
+            .dequeueReusableCell(withIdentifier: cellID, for: indexPath)
+                as? SwitchCell else { return UITableViewCell() }
         cell.setupCell(title)
         
         return cell

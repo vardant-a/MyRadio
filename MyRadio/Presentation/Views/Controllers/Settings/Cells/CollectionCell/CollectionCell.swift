@@ -11,7 +11,8 @@ final class CollectionCell: UITableViewCell {
     
     // MARK: - Private Properties
     
-    private var colorSets: [ColorSet] = colors
+    private var colorSetCollection: [ColorSet] = ColorSet
+        .getColorSetCollection()
     
     private var layout: UICollectionViewFlowLayout = {
         let layout = UICollectionViewFlowLayout()
@@ -21,8 +22,6 @@ final class CollectionCell: UITableViewCell {
     }()
     
     // MARK: - Private lazy Properties
-    
-    private lazy var cellSize = cellCollectionView.frame.height
     
     private lazy var cellCollectionView: UICollectionView = {
         let collectionView = UICollectionView(
@@ -76,16 +75,16 @@ final class CollectionCell: UITableViewCell {
 
 extension CollectionCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        colorSets.count
+        colorSetCollection.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView
             .dequeueReusableCell(withReuseIdentifier: AppStyleCell.cellID, for: indexPath) as? AppStyleCell else { return UICollectionViewCell() }
-        cell.configureCell(colorSets[indexPath.item])
+        cell.configureCell(colorSetCollection[indexPath.item])
         
         let selectedIndex = AppSettings.shared.appStyle
-        cell.isSelected = indexPath.item == selectedIndex
+        cell.isSelected = indexPath.row == selectedIndex
         
         return cell
     }

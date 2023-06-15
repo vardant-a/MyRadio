@@ -135,31 +135,6 @@ enum Colors {
     }
 }
 
-var colors: [ColorSet] = [
-    ColorSet(
-        title: "Classic",
-        acceptColor: Colors.ClasicColorSet.acceptColor,
-        secondColor: Colors.ClasicColorSet.secondColor,
-        unselectedColor: Colors.ClasicColorSet.unselectedColor,
-        mainColor: Colors.ClasicColorSet.mainColor,
-        offColor: Colors.ClasicColorSet.offColor),
-    ColorSet(
-        title: "Custom",
-        acceptColor: Colors.CustomColorSet.acceptColor,
-        secondColor: Colors.CustomColorSet.secondColor,
-        unselectedColor: Colors.CustomColorSet.unselectedColor,
-        mainColor: Colors.CustomColorSet.mainColor,
-        offColor: Colors.CustomColorSet.offColor),
-    ColorSet(
-        title: "Ocean",
-        acceptColor: Colors.OceanColorSet.acceptColor,
-        secondColor: Colors.OceanColorSet.secondColor,
-        unselectedColor: Colors.OceanColorSet.unselectedColor,
-        mainColor: Colors.OceanColorSet.mainColor,
-        offColor: Colors.OceanColorSet.offColor),
-]
-
-
 struct ColorSet {
     let title: String
     var acceptColor: UIColor
@@ -167,4 +142,30 @@ struct ColorSet {
     var unselectedColor: UIColor
     var mainColor: UIColor
     var offColor: UIColor
+    
+    static func getColorSetCollection() -> [ColorSet] {
+        return [
+            ColorSet(
+                title: Localizable.ColorSetTitle.system,
+                acceptColor: Colors.ClasicColorSet.acceptColor,
+                secondColor: Colors.ClasicColorSet.secondColor,
+                unselectedColor: Colors.ClasicColorSet.unselectedColor,
+                mainColor: Colors.ClasicColorSet.mainColor,
+                offColor: Colors.ClasicColorSet.offColor),
+            ColorSet(
+                title: Localizable.ColorSetTitle.custom,
+                acceptColor: Colors.CustomColorSet.acceptColor,
+                secondColor: Colors.CustomColorSet.secondColor,
+                unselectedColor: Colors.CustomColorSet.unselectedColor,
+                mainColor: Colors.CustomColorSet.mainColor,
+                offColor: Colors.CustomColorSet.offColor),
+            ColorSet(
+                title: Localizable.ColorSetTitle.ocean,
+                acceptColor: Colors.OceanColorSet.acceptColor,
+                secondColor: Colors.OceanColorSet.secondColor,
+                unselectedColor: Colors.OceanColorSet.unselectedColor,
+                mainColor: Colors.OceanColorSet.mainColor,
+                offColor: Colors.OceanColorSet.offColor),
+        ]
+    }
 }
