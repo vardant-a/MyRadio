@@ -1,4 +1,3 @@
 # MyRadio
 
-## This project created to work radio
-Work for API
+## The application is under development, all the information in the dev branch
