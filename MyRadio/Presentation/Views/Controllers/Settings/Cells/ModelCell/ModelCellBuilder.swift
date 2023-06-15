@@ -1,37 +1,35 @@
 //
-//  ButtonCellBuilder.swift
+//  ModelCellBuilder.swift
 //  MyRadio
 //
-//  Created by Aleksei on 13.06.2023.
+//  Created by Aleksei on 15.06.2023.
 //
 
 import UIKit
 
-final class ButtonCellBuilder {
-    
+final class ModelCellBuilder {
     let cellID: String
     let title: String
-    
+
     init(cellID: String, title: String) {
         self.cellID = cellID
         self.title = title
     }
 }
 
-extension ButtonCellBuilder: SettingsCell {
+extension ModelCellBuilder: SettingsCell {
     var height: CGFloat {
         44
     }
     
     func register(with tableView: UITableView) {
-        tableView.register(ButtonCell.self, forCellReuseIdentifier: cellID)
+        tableView.register(ModelCell.self, forCellReuseIdentifier: cellID)
     }
     
     func dequeue(for tableView: UITableView, at indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView
             .dequeueReusableCell(withIdentifier: cellID, for: indexPath)
-                as? ButtonCell else { return UITableViewCell() }
-        cell.setupCell(title: title, titleColor: .systemRed, buttonColor: Colors.ClasicColorSet.mainColor)
+                as? ModelCell else { return UITableViewCell() }
         
         return cell
     }

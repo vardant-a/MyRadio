@@ -1,0 +1,28 @@
+//
+
+/* ViewController */
+
+"ViewController.radioStationsTitle" = "Радиостанции";
+"ViewController.musicsTitle" = "Музыка";
+"ViewController.settingsTitle" = "Настройки";
+
+/* Settings */
+
+"Settings.sectionGeneral.header" = "Основные";
+"Settings.sectionGeneral.footer" = "";
+
+"Settings.sectionAppearance.header" = "Оформление";
+"Settings.sectionAppearance.systemMode" = "Системный режим";
+"Settings.sectionAppearance.darkMode" = "Ночной режим";
+"Settings.sectionAppearance.footer" = "Настраивайте оформление приложения под себя, чтобы получить максимальное удовольствие от его использования.";
+
+"Settings.sectionOther.resetButton" = "Cброс настроек";
+"Settings.sectionOther.footer" = "При нажатии на кнопку сброс, данные будут удалены, а доступ к вашим любимым радиостанциям и сохраненным трекам будет утерян.";
+
+/* ColorSet */
+
+"ColorSet.systemTitle" = "Cистемный";
+"ColorSet.customTitle" = "Кастомный";
+"ColorSet.oceanTitle" = "Океан";
+
+//

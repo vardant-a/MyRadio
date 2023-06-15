@@ -45,19 +45,19 @@ final class MainTabBarController: UITabBarController {
     private func setupViewControllers() {
         let allStationsVC = getCompletedController(
             allStationsViewController,
-            title: "Radio Stations",
+            title: Localizable.ControllerTitle.radioStations,
             image: UIImage(systemName: "radio"),
             selectedImage: UIImage(systemName: "radio.fill"))
         
         let musicListVC = getCompletedController(
             musicListViewController,
-            title: "Musics",
+            title: Localizable.ControllerTitle.musics,
             image: UIImage(systemName: "line.3.horizontal.circle"),
             selectedImage: UIImage(systemName: "line.3.horizontal.circle.fill"))
         
         let settingsVC = getCompletedController(
             settingsViewController,
-            title: "Settings",
+            title: Localizable.ControllerTitle.settings,
             image: UIImage(systemName: "gear"),
             selectedImage: UIImage(systemName: "gear"))
         
@@ -82,9 +82,9 @@ final class MainTabBarController: UITabBarController {
     private func setupTabBarStyle() {
         let tabBarAppearance = UITabBar.appearance()
         
-        tabBarAppearance.tintColor = Colors.BasicColorSet.acceptColor
-        tabBarAppearance.unselectedItemTintColor = Colors.BasicColorSet.unselectedColor
-        tabBarAppearance.barTintColor = Colors.BasicColorSet.mainColor
-        tabBarAppearance.backgroundColor = Colors.BasicColorSet.mainColor
+        tabBarAppearance.tintColor = Colors.ClasicColorSet.acceptColor
+        tabBarAppearance.unselectedItemTintColor = Colors.ClasicColorSet.unselectedColor
+        tabBarAppearance.barTintColor = Colors.ClasicColorSet.mainColor
+        tabBarAppearance.backgroundColor = Colors.ClasicColorSet.mainColor
     }
 }

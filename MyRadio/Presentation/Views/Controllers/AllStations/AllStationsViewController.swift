@@ -26,6 +26,6 @@ final class AllStationsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = Colors.BasicColorSet.offColor
+        view.backgroundColor = Colors.ClasicColorSet.offColor
     }
 }

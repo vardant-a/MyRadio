@@ -55,7 +55,7 @@ final class SettingsViewController: UIViewController {
         super.viewDidLoad()
         settings = testSettings
         configureNavigationController()
-        view.backgroundColor = Colors.BasicColorSet.offColor
+        view.backgroundColor = Colors.ClasicColorSet.offColor
         view.addSubviews(settingsTableView)
         setupLayout()
     }
