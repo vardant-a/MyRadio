@@ -27,7 +27,8 @@ extension CollectionCellBuilder: SettingsCell {
     
     func dequeue(for tableView: UITableView, at indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView
-            .dequeueReusableCell(withIdentifier: cellID, for: indexPath) as? CollectionCell else { return UITableViewCell() }
+            .dequeueReusableCell(withIdentifier: cellID, for: indexPath)
+                as? CollectionCell else { return UITableViewCell() }
         
         return cell
     }

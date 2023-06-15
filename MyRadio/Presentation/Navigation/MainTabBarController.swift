@@ -43,30 +43,48 @@ final class MainTabBarController: UITabBarController {
     // MARK: - Private Methods
     
     private func setupViewControllers() {
-        allStationsViewController.tabBarItem = UITabBarItem(
-            title: "All Stations",
+        let allStationsVC = getCompletedController(
+            allStationsViewController,
+            title: Localizable.ControllerTitle.radioStations,
             image: UIImage(systemName: "radio"),
             selectedImage: UIImage(systemName: "radio.fill"))
         
-        musicListViewController.tabBarItem = UITabBarItem(
-            title: "Musics",
+        let musicListVC = getCompletedController(
+            musicListViewController,
+            title: Localizable.ControllerTitle.musics,
             image: UIImage(systemName: "line.3.horizontal.circle"),
             selectedImage: UIImage(systemName: "line.3.horizontal.circle.fill"))
         
-        settingsViewController.tabBarItem = UITabBarItem(
-            title: "Settings",
+        let settingsVC = getCompletedController(
+            settingsViewController,
+            title: Localizable.ControllerTitle.settings,
             image: UIImage(systemName: "gear"),
             selectedImage: UIImage(systemName: "gear"))
         
-        viewControllers = [allStationsViewController, musicListViewController, settingsViewController]
+        viewControllers = [allStationsVC, musicListVC, settingsVC]
+    }
+    
+    private func getCompletedController(_ view: UIViewController, title: String, image: UIImage?, selectedImage: UIImage?) -> UINavigationController {
+        guard let image = image, let selectedImage = selectedImage else {
+            return UINavigationController()
+        }
+        
+        let readyController = MainNavigationController(rootViewController: view)
+        view.title = title
+        readyController.tabBarItem = UITabBarItem(
+            title: title,
+            image: image,
+            selectedImage: selectedImage)
+        
+        return readyController
     }
     
     private func setupTabBarStyle() {
         let tabBarAppearance = UITabBar.appearance()
         
-        tabBarAppearance.tintColor = Colors.BasicColorSet.acceptColor
-        tabBarAppearance.unselectedItemTintColor = Colors.BasicColorSet.unselectedColor
-        tabBarAppearance.barTintColor = Colors.BasicColorSet.mainColor
-        tabBarAppearance.backgroundColor = Colors.BasicColorSet.mainColor
+        tabBarAppearance.tintColor = Colors.ClasicColorSet.acceptColor
+        tabBarAppearance.unselectedItemTintColor = Colors.ClasicColorSet.unselectedColor
+        tabBarAppearance.barTintColor = Colors.ClasicColorSet.mainColor
+        tabBarAppearance.backgroundColor = Colors.ClasicColorSet.mainColor
     }
 }
