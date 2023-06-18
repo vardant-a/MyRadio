@@ -31,7 +31,8 @@ extension ButtonCellBuilder: SettingsCell {
         guard let cell = tableView
             .dequeueReusableCell(withIdentifier: cellID, for: indexPath)
                 as? ButtonCell else { return UITableViewCell() }
-        cell.setupCell(title: title, titleColor: .systemRed, buttonColor: Colors.ClasicColorSet.mainColor)
+        cell.setupCell(title: title, titleColor: .systemRed,
+                       buttonColor: Colors.ClassicColorSet.mainColor)
         
         return cell
     }

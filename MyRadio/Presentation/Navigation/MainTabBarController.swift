@@ -82,9 +82,9 @@ final class MainTabBarController: UITabBarController {
     private func setupTabBarStyle() {
         let tabBarAppearance = UITabBar.appearance()
         
-        tabBarAppearance.tintColor = Colors.ClasicColorSet.acceptColor
-        tabBarAppearance.unselectedItemTintColor = Colors.ClasicColorSet.unselectedColor
-        tabBarAppearance.barTintColor = Colors.ClasicColorSet.mainColor
-        tabBarAppearance.backgroundColor = Colors.ClasicColorSet.mainColor
+        tabBarAppearance.tintColor = Colors.ClassicColorSet.acceptColor
+        tabBarAppearance.unselectedItemTintColor = Colors.ClassicColorSet.unselectedColor
+        tabBarAppearance.barTintColor = Colors.ClassicColorSet.mainColor
+        tabBarAppearance.backgroundColor = Colors.ClassicColorSet.mainColor
     }
 }

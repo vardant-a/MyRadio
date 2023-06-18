@@ -15,10 +15,10 @@ final class AppStyleCell: UICollectionViewCell {
         didSet {
             if isSelected {
                 contentView.layer.borderColor = Colors
-                    .ClasicColorSet.acceptColor.cgColor
+                    .ClassicColorSet.acceptColor.cgColor
             } else {
                 contentView.layer.borderColor = Colors
-                    .ClasicColorSet.unselectedColor.cgColor
+                    .ClassicColorSet.unselectedColor.cgColor
             }
         }
     }

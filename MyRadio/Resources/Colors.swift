@@ -8,7 +8,7 @@
 import UIKit
 
 enum Colors {
-    enum ClasicColorSet {
+    enum ClassicColorSet {
         static var acceptColor = UIColor { trait in
             if trait.userInterfaceStyle == .dark {
                 return UIColor.systemBlue
@@ -147,11 +147,11 @@ struct ColorSet {
         return [
             ColorSet(
                 title: Localizable.ColorSetTitle.system,
-                acceptColor: Colors.ClasicColorSet.acceptColor,
-                secondColor: Colors.ClasicColorSet.secondColor,
-                unselectedColor: Colors.ClasicColorSet.unselectedColor,
-                mainColor: Colors.ClasicColorSet.mainColor,
-                offColor: Colors.ClasicColorSet.offColor),
+                acceptColor: Colors.ClassicColorSet.acceptColor,
+                secondColor: Colors.ClassicColorSet.secondColor,
+                unselectedColor: Colors.ClassicColorSet.unselectedColor,
+                mainColor: Colors.ClassicColorSet.mainColor,
+                offColor: Colors.ClassicColorSet.offColor),
             ColorSet(
                 title: Localizable.ColorSetTitle.custom,
                 acceptColor: Colors.CustomColorSet.acceptColor,
