@@ -55,9 +55,14 @@ final class SettingsViewController: UIViewController {
         super.viewDidLoad()
         settings = testSettings
         configureNavigationController()
-        view.backgroundColor = Colors.ClasicColorSet.offColor
+        view.backgroundColor = Colors.ClassicColorSet.offColor
         view.addSubviews(settingsTableView)
         setupLayout()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tabBarController?.tabBar.isHidden = false
     }
     
     // MARK: - Private Methods
@@ -73,7 +78,8 @@ final class SettingsViewController: UIViewController {
     // MARK: - Objc Methods
     
     @objc private func tuppedRightBarButtonItem() {
-        print("tupped")
+        navigationController?.show(AboutViewController(), sender: nil)
+        tabBarController?.tabBar.isHidden = true
     }
     
     // MARK: - Layout

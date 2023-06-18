@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E37EF4D2A3F982E00FEF06A /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E37EF4C2A3F982E00FEF06A /* AboutViewController.swift */; };
+		0E37EF4F2A3F9AEF00FEF06A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E37EF4E2A3F9AEF00FEF06A /* Constants.swift */; };
 		0E48CF402A2E9861009228DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E48CF3F2A2E9861009228DF /* AppDelegate.swift */; };
 		0E48CF422A2E9861009228DF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E48CF412A2E9861009228DF /* SceneDelegate.swift */; };
 		0E48CF492A2E9862009228DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E48CF482A2E9862009228DF /* Assets.xcassets */; };
@@ -40,6 +42,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E37EF4C2A3F982E00FEF06A /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		0E37EF4E2A3F9AEF00FEF06A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0E48CF3C2A2E9861009228DF /* MyRadio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyRadio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E48CF3F2A2E9861009228DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0E48CF412A2E9861009228DF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +91,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E37EF4B2A3F981000FEF06A /* About */ = {
+			isa = PBXGroup;
+			children = (
+				0E37EF4C2A3F982E00FEF06A /* AboutViewController.swift */,
+			);
+			path = About;
+			sourceTree = "<group>";
+		};
 		0E48CF332A2E9861009228DF = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +145,7 @@
 				0E48CF5B2A2E9F15009228DF /* Colors.swift */,
 				0E8F8F3B2A3523720009CBF6 /* AppSettings.swift */,
 				0E8F8F3D2A3527000009CBF6 /* AppStyle.swift */,
+				0E37EF4E2A3F9AEF00FEF06A /* Constants.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -160,6 +173,7 @@
 				0E575C7B2A392B3000AA2E82 /* AllStations */,
 				0E575C7C2A392B3B00AA2E82 /* MusicList */,
 				0E48CF5D2A2EA19C009228DF /* Settings */,
+				0E37EF4B2A3F981000FEF06A /* About */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -346,11 +360,13 @@
 				0E48CF402A2E9861009228DF /* AppDelegate.swift in Sources */,
 				0E48CF6A2A2EA7A9009228DF /* UIView+EX.swift in Sources */,
 				0E48CF5A2A2E9C6E009228DF /* MainTabBarController.swift in Sources */,
+				0E37EF4F2A3F9AEF00FEF06A /* Constants.swift in Sources */,
 				0E575C842A392F8900AA2E82 /* MusicListViewModel.swift in Sources */,
 				0E48CF6E2A2F30F9009228DF /* TestMenu.swift in Sources */,
 				0E575C7A2A391DB600AA2E82 /* UIColor+EX.swift in Sources */,
 				0EC402AF2A3B488100DC775B /* Localizable.swift in Sources */,
 				0E575C6D2A39021200AA2E82 /* SwitchCellBuilder.swift in Sources */,
+				0E37EF4D2A3F982E00FEF06A /* AboutViewController.swift in Sources */,
 				0E8F8F3C2A3523720009CBF6 /* AppSettings.swift in Sources */,
 				0E575C622A38977E00AA2E82 /* CollectionCellBuilder.swift in Sources */,
 				0E48CF422A2E9861009228DF /* SceneDelegate.swift in Sources */,

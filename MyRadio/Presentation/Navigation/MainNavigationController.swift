@@ -10,7 +10,9 @@ import UIKit
 final class MainNavigationController: UINavigationController {
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
-        return UIStatusBarStyle(rawValue: topViewController?.preferredStatusBarStyle.rawValue ?? .max) ?? .default
+        return UIStatusBarStyle(
+            rawValue: topViewController?.preferredStatusBarStyle
+                .rawValue ?? .max) ?? .default
     }
     
     // MARK: - Init
@@ -28,16 +30,16 @@ final class MainNavigationController: UINavigationController {
     
     private func configureNavController() {
         let navBarAppearance = UINavigationBarAppearance()
-        navBarAppearance.backgroundColor = Colors.ClasicColorSet.mainColor
+        navBarAppearance.backgroundColor = Colors.ClassicColorSet.mainColor
         navBarAppearance.shadowColor = .clear
         navBarAppearance.titleTextAttributes = [
-            .foregroundColor: Colors.ClasicColorSet.secondColor]
+            .foregroundColor: Colors.ClassicColorSet.secondColor]
         navBarAppearance.largeTitleTextAttributes = [
-            .foregroundColor: Colors.ClasicColorSet.secondColor]
+            .foregroundColor: Colors.ClassicColorSet.secondColor]
 
-        UINavigationBar.appearance().tintColor = Colors.ClasicColorSet.acceptColor
-        UINavigationBar.appearance().prefersLargeTitles = true
         UINavigationBar.appearance().standardAppearance = navBarAppearance
         UINavigationBar.appearance().scrollEdgeAppearance = navBarAppearance
+        UINavigationBar.appearance().tintColor = Colors.ClassicColorSet.acceptColor
+        UINavigationBar.appearance().prefersLargeTitles = true
     }
 }

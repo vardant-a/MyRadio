@@ -7,9 +7,24 @@
 
 import UIKit
 
+protocol SettingsViewProtocol {
+    var settings: [SettingsSection] { get }
+}
+
 final class SettingsViewModel {
     
-    var settings: [Int] {
-        [1, 2, 3, 4, 6]
+    var settings: [SettingsSection] {
+        return testSettings
     }
+    
+    
+    // MARK: Public Methods
+    
+    func showAboutView() {
+    }
+}
+
+    // MARK: - SettingsViewModel + SettingsViewProtocol
+
+extension SettingsViewModel: SettingsViewProtocol {
 }
