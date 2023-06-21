@@ -11,7 +11,7 @@ final class SettingsViewController: UIViewController {
     
     // MARK: - Private Properties
     
-    private let viewModel: SettingsViewModel
+    private let viewModel: SettingsViewProtocol
     
     private var settings: [SettingsSection] = [] {
         didSet {
@@ -40,7 +40,7 @@ final class SettingsViewController: UIViewController {
     
     // MARK: - Init
     
-    init(viewModel: SettingsViewModel) {
+    init(viewModel: SettingsViewProtocol) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
@@ -55,14 +55,9 @@ final class SettingsViewController: UIViewController {
         super.viewDidLoad()
         settings = testSettings
         configureNavigationController()
-        view.backgroundColor = Colors.ClassicColorSet.offColor
+        view.backgroundColor = Colors.ClassicColorSet.backgroundColor
         view.addSubviews(settingsTableView)
         setupLayout()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        tabBarController?.tabBar.isHidden = false
     }
     
     // MARK: - Private Methods
@@ -78,8 +73,10 @@ final class SettingsViewController: UIViewController {
     // MARK: - Objc Methods
     
     @objc private func tuppedRightBarButtonItem() {
-        navigationController?.show(AboutViewController(), sender: nil)
-        tabBarController?.tabBar.isHidden = true
+        let viewModel = AboutAppViewModel()
+        let nextVC = AboutAppViewController(viewModel: viewModel)
+        
+        navigationController?.show(nextVC, sender: nil)
     }
     
     // MARK: - Layout
@@ -105,19 +102,23 @@ extension SettingsViewController: UITableViewDataSource {
         return settings.count
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView,
+                   numberOfRowsInSection section: Int) -> Int {
         return settings[section].cells.count
     }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    func tableView(_ tableView: UITableView,
+                   titleForHeaderInSection section: Int) -> String? {
         return settings[section].header
     }
     
-    func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+    func tableView(_ tableView: UITableView,
+                   titleForFooterInSection section: Int) -> String? {
         return settings[section].footer
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView,
+                   cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = settings[indexPath.section].cells[indexPath.row]
             .dequeue(for: tableView, at: indexPath)
         
@@ -128,7 +129,8 @@ extension SettingsViewController: UITableViewDataSource {
     // MARK: - UITableViewDelegate
 
 extension SettingsViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView,
+                   heightForRowAt indexPath: IndexPath) -> CGFloat {
         return settings[indexPath.section].cells[indexPath.row].height
     }
 }

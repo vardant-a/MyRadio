@@ -28,7 +28,7 @@ final class SwitchCell: UITableViewCell {
     
     private lazy var uiSwitch: UISwitch = {
         let uiSwitch = UISwitch()
-        uiSwitch.onTintColor = Colors.ClassicColorSet.acceptColor
+        uiSwitch.onTintColor = Colors.ClassicColorSet.tintColor
         
         return uiSwitch
     }()

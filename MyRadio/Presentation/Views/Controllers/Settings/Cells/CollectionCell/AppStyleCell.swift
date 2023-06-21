@@ -73,7 +73,7 @@ final class AppStyleCell: UICollectionViewCell {
         cellView.backgroundColor = colorSet.mainColor
         footerView.backgroundColor = colorSet.mainColor
         iconView.backgroundColor = colorSet.acceptColor
-        contentView.backgroundColor = colorSet.offColor
+        contentView.backgroundColor = colorSet.backgroundColor
     }
     
     // MARK: - Layout

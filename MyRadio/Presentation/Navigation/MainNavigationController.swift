@@ -40,6 +40,6 @@ final class MainNavigationController: UINavigationController {
         UINavigationBar.appearance().standardAppearance = navBarAppearance
         UINavigationBar.appearance().scrollEdgeAppearance = navBarAppearance
         UINavigationBar.appearance().tintColor = Colors.ClassicColorSet.acceptColor
-        UINavigationBar.appearance().prefersLargeTitles = true
+        UINavigationBar.appearance().prefersLargeTitles = false
     }
 }
