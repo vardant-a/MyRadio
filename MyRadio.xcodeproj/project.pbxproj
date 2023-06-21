@@ -40,6 +40,8 @@
 		0EC402B12A3B51F700DC775B /* ModelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC402B02A3B51F600DC775B /* ModelCell.swift */; };
 		0EC402B42A3B520E00DC775B /* ModelCellBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC402B32A3B520E00DC775B /* ModelCellBuilder.swift */; };
 		0EEFB2462A43960A00608D6B /* AboutAppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEFB2452A43960A00608D6B /* AboutAppViewModel.swift */; };
+		0EEFB24B2A439DEF00608D6B /* ColorSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEFB24A2A439DEF00608D6B /* ColorSet.swift */; };
+		0EEFB24D2A439F0000608D6B /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEFB24C2A439F0000608D6B /* NetworkService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +82,8 @@
 		0EC402B02A3B51F600DC775B /* ModelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelCell.swift; sourceTree = "<group>"; };
 		0EC402B32A3B520E00DC775B /* ModelCellBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelCellBuilder.swift; sourceTree = "<group>"; };
 		0EEFB2452A43960A00608D6B /* AboutAppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutAppViewModel.swift; sourceTree = "<group>"; };
+		0EEFB24A2A439DEF00608D6B /* ColorSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSet.swift; sourceTree = "<group>"; };
+		0EEFB24C2A439F0000608D6B /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				0E48CF532A2E987C009228DF /* Application */,
+				0EEFB2472A439D4500608D6B /* Infrastructure */,
 				0E48CF552A2E9C28009228DF /* Presentation */,
 				0E48CF542A2E988E009228DF /* Resources */,
 			);
@@ -142,13 +147,11 @@
 		0E48CF542A2E988E009228DF /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				0EC402AD2A3B486E00DC775B /* Localizable */,
 				0E48CF682A2EA79A009228DF /* Extensions */,
-				0E48CF482A2E9862009228DF /* Assets.xcassets */,
+				0EC402AD2A3B486E00DC775B /* Localizable */,
 				0E48CF5B2A2E9F15009228DF /* Colors.swift */,
-				0E8F8F3B2A3523720009CBF6 /* AppSettings.swift */,
-				0E8F8F3D2A3527000009CBF6 /* AppStyle.swift */,
 				0E37EF4E2A3F9AEF00FEF06A /* Constants.swift */,
+				0E48CF482A2E9862009228DF /* Assets.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -157,7 +160,10 @@
 			isa = PBXGroup;
 			children = (
 				0E48CF582A2E9C58009228DF /* Navigation */,
+				0E48CF572A2E9C45009228DF /* Controllers */,
 				0E48CF562A2E9C3E009228DF /* Views */,
+				0EEFB2502A43A24A00608D6B /* Alerts */,
+				0EEFB24F2A43A1BA00608D6B /* Cells */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -165,7 +171,6 @@
 		0E48CF562A2E9C3E009228DF /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				0E48CF572A2E9C45009228DF /* Controllers */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -286,6 +291,55 @@
 			path = ModelCell;
 			sourceTree = "<group>";
 		};
+		0EEFB2472A439D4500608D6B /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				0EEFB2492A439D7000608D6B /* Models */,
+				0EEFB2482A439D5E00608D6B /* Services */,
+				0EEFB24E2A43A01A00608D6B /* Healpers */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		0EEFB2482A439D5E00608D6B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				0E8F8F3B2A3523720009CBF6 /* AppSettings.swift */,
+				0EEFB24C2A439F0000608D6B /* NetworkService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		0EEFB2492A439D7000608D6B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0EEFB24A2A439DEF00608D6B /* ColorSet.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0EEFB24E2A43A01A00608D6B /* Healpers */ = {
+			isa = PBXGroup;
+			children = (
+				0E8F8F3D2A3527000009CBF6 /* AppStyle.swift */,
+			);
+			path = Healpers;
+			sourceTree = "<group>";
+		};
+		0EEFB24F2A43A1BA00608D6B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		0EEFB2502A43A24A00608D6B /* Alerts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Alerts;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -368,8 +422,10 @@
 				0E48CF6E2A2F30F9009228DF /* TestMenu.swift in Sources */,
 				0E575C7A2A391DB600AA2E82 /* UIColor+EX.swift in Sources */,
 				0EC402AF2A3B488100DC775B /* Localizable.swift in Sources */,
+				0EEFB24D2A439F0000608D6B /* NetworkService.swift in Sources */,
 				0EEFB2462A43960A00608D6B /* AboutAppViewModel.swift in Sources */,
 				0E575C6D2A39021200AA2E82 /* SwitchCellBuilder.swift in Sources */,
+				0EEFB24B2A439DEF00608D6B /* ColorSet.swift in Sources */,
 				0E37EF4D2A3F982E00FEF06A /* AboutAppViewController.swift in Sources */,
 				0E8F8F3C2A3523720009CBF6 /* AppSettings.swift in Sources */,
 				0E575C622A38977E00AA2E82 /* CollectionCellBuilder.swift in Sources */,

@@ -36,4 +36,9 @@ enum Constants {
             return number
         }
     }
+    
+    enum Value {
+        static let verticalOffset: CGFloat = 20
+        static let horizontalOffset: CGFloat = 16
+    }
 }
