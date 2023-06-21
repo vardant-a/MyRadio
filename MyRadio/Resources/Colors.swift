@@ -25,6 +25,8 @@ enum Colors {
             }
         }
         
+        static let tintColor = UIColor.systemGreen
+        
         static var unselectedColor = UIColor { trait in
             if trait.userInterfaceStyle == .dark {
                 return .darkGray
@@ -41,7 +43,7 @@ enum Colors {
             }
         }
         
-        static var offColor = UIColor { trait in
+        static var backgroundColor = UIColor { trait in
             if trait.userInterfaceStyle == .dark {
                 return UIColor(hexString: "#000000")
             } else {
@@ -83,7 +85,7 @@ enum Colors {
             }
         }
         
-        static var offColor = UIColor { trait in
+        static var backgroundColor = UIColor { trait in
             if trait.userInterfaceStyle == .dark {
                 return UIColor(hexString: "#000000")
             } else {
@@ -125,7 +127,7 @@ enum Colors {
             }
         }
         
-        static var offColor = UIColor { trait in
+        static var backgroundColor = UIColor { trait in
             if trait.userInterfaceStyle == .dark {
                 return UIColor(hexString: "#000000")
             } else {
@@ -138,34 +140,38 @@ enum Colors {
 struct ColorSet {
     let title: String
     var acceptColor: UIColor
+    var tintColor: UIColor
     var secondColor: UIColor
     var unselectedColor: UIColor
     var mainColor: UIColor
-    var offColor: UIColor
+    var backgroundColor: UIColor
     
     static func getColorSetCollection() -> [ColorSet] {
         return [
             ColorSet(
                 title: Localizable.ColorSetTitle.system,
                 acceptColor: Colors.ClassicColorSet.acceptColor,
+                tintColor: .systemGreen,
                 secondColor: Colors.ClassicColorSet.secondColor,
                 unselectedColor: Colors.ClassicColorSet.unselectedColor,
                 mainColor: Colors.ClassicColorSet.mainColor,
-                offColor: Colors.ClassicColorSet.offColor),
+                backgroundColor: Colors.ClassicColorSet.backgroundColor),
             ColorSet(
                 title: Localizable.ColorSetTitle.custom,
                 acceptColor: Colors.CustomColorSet.acceptColor,
+                tintColor: Colors.CustomColorSet.acceptColor,
                 secondColor: Colors.CustomColorSet.secondColor,
                 unselectedColor: Colors.CustomColorSet.unselectedColor,
                 mainColor: Colors.CustomColorSet.mainColor,
-                offColor: Colors.CustomColorSet.offColor),
+                backgroundColor: Colors.CustomColorSet.backgroundColor),
             ColorSet(
                 title: Localizable.ColorSetTitle.ocean,
                 acceptColor: Colors.OceanColorSet.acceptColor,
+                tintColor: Colors.CustomColorSet.acceptColor,
                 secondColor: Colors.OceanColorSet.secondColor,
                 unselectedColor: Colors.OceanColorSet.unselectedColor,
                 mainColor: Colors.OceanColorSet.mainColor,
-                offColor: Colors.OceanColorSet.offColor),
+                backgroundColor: Colors.OceanColorSet.backgroundColor),
         ]
     }
 }

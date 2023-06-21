@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0E37EF4D2A3F982E00FEF06A /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E37EF4C2A3F982E00FEF06A /* AboutViewController.swift */; };
+		0E37EF4D2A3F982E00FEF06A /* AboutAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E37EF4C2A3F982E00FEF06A /* AboutAppViewController.swift */; };
 		0E37EF4F2A3F9AEF00FEF06A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E37EF4E2A3F9AEF00FEF06A /* Constants.swift */; };
 		0E48CF402A2E9861009228DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E48CF3F2A2E9861009228DF /* AppDelegate.swift */; };
 		0E48CF422A2E9861009228DF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E48CF412A2E9861009228DF /* SceneDelegate.swift */; };
@@ -39,10 +39,11 @@
 		0EC402AF2A3B488100DC775B /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC402AE2A3B488100DC775B /* Localizable.swift */; };
 		0EC402B12A3B51F700DC775B /* ModelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC402B02A3B51F600DC775B /* ModelCell.swift */; };
 		0EC402B42A3B520E00DC775B /* ModelCellBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC402B32A3B520E00DC775B /* ModelCellBuilder.swift */; };
+		0EEFB2462A43960A00608D6B /* AboutAppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEFB2452A43960A00608D6B /* AboutAppViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0E37EF4C2A3F982E00FEF06A /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		0E37EF4C2A3F982E00FEF06A /* AboutAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutAppViewController.swift; sourceTree = "<group>"; };
 		0E37EF4E2A3F9AEF00FEF06A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0E48CF3C2A2E9861009228DF /* MyRadio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyRadio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E48CF3F2A2E9861009228DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +79,7 @@
 		0EC402AE2A3B488100DC775B /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
 		0EC402B02A3B51F600DC775B /* ModelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelCell.swift; sourceTree = "<group>"; };
 		0EC402B32A3B520E00DC775B /* ModelCellBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelCellBuilder.swift; sourceTree = "<group>"; };
+		0EEFB2452A43960A00608D6B /* AboutAppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutAppViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,12 +93,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0E37EF4B2A3F981000FEF06A /* About */ = {
+		0E37EF4B2A3F981000FEF06A /* AboutApp */ = {
 			isa = PBXGroup;
 			children = (
-				0E37EF4C2A3F982E00FEF06A /* AboutViewController.swift */,
+				0E37EF4C2A3F982E00FEF06A /* AboutAppViewController.swift */,
+				0EEFB2452A43960A00608D6B /* AboutAppViewModel.swift */,
 			);
-			path = About;
+			path = AboutApp;
 			sourceTree = "<group>";
 		};
 		0E48CF332A2E9861009228DF = {
@@ -173,7 +176,7 @@
 				0E575C7B2A392B3000AA2E82 /* AllStations */,
 				0E575C7C2A392B3B00AA2E82 /* MusicList */,
 				0E48CF5D2A2EA19C009228DF /* Settings */,
-				0E37EF4B2A3F981000FEF06A /* About */,
+				0E37EF4B2A3F981000FEF06A /* AboutApp */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -365,8 +368,9 @@
 				0E48CF6E2A2F30F9009228DF /* TestMenu.swift in Sources */,
 				0E575C7A2A391DB600AA2E82 /* UIColor+EX.swift in Sources */,
 				0EC402AF2A3B488100DC775B /* Localizable.swift in Sources */,
+				0EEFB2462A43960A00608D6B /* AboutAppViewModel.swift in Sources */,
 				0E575C6D2A39021200AA2E82 /* SwitchCellBuilder.swift in Sources */,
-				0E37EF4D2A3F982E00FEF06A /* AboutViewController.swift in Sources */,
+				0E37EF4D2A3F982E00FEF06A /* AboutAppViewController.swift in Sources */,
 				0E8F8F3C2A3523720009CBF6 /* AppSettings.swift in Sources */,
 				0E575C622A38977E00AA2E82 /* CollectionCellBuilder.swift in Sources */,
 				0E48CF422A2E9861009228DF /* SceneDelegate.swift in Sources */,
