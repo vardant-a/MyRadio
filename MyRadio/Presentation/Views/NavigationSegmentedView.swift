@@ -9,13 +9,13 @@ import UIKit
 
 final class NavigationSegmentedView: UIView {
     
-    // MARK: - Public Properties
+    // MARK: - Private Properties
     
-//    var selectedIndex: Int? {
-//        didSet {
-//            changePositionSegmentedLineView()
-//        }
-//    }
+   private var selectedIndex: Int = 0 {
+        didSet {
+            changePositionSegmentedLineView()
+        }
+    }
     
     // MARK: - Private lazy Properties
     
@@ -34,8 +34,12 @@ final class NavigationSegmentedView: UIView {
     
     // MARK: - Init
     
-    init(target: Any?, action: Selector) {
-        super.init(frame: .zero)
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+    
+    convenience init(target: Any?, action: Selector) {
+        self.init()
         backgroundColor = Colors.ClassicColorSet.mainColor
         segmentedControl.addTarget(target, action: action, for: .valueChanged)
         addSubviews(segmentedControl)
@@ -45,6 +49,16 @@ final class NavigationSegmentedView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    // MARK: - Public Methods
+    
+    func setupSelectedControlIndex(_ selectedIndex: Int) {
+        self.selectedIndex = selectedIndex
+    }
+    
+    // MARK: - Private Methods
+    
+    private func changePositionSegmentedLineView() {}
     
     // MARK: - Layout
     
