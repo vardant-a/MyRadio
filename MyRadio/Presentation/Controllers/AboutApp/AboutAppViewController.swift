@@ -9,7 +9,20 @@ import UIKit
 
 final class AboutAppViewController: UIViewController {
     
+    // MARK: - Private Properties
+    
     private let viewModel: AboutAppViewModelProtocol
+    
+    // MARK: - Private lazy Properties
+    
+    private lazy var appVersionLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Application version - " + viewModel.getAppVersion()
+        label.font = UIFont.systemFont(ofSize: 13)
+        label.textColor = Colors.ClassicColorSet.unselectedColor
+        
+        return label
+    }()
     
     // MARK: - Init
     
@@ -26,18 +39,41 @@ final class AboutAppViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        title = "О приложении"
         view.backgroundColor = Colors.ClassicColorSet.backgroundColor
+        view.addSubviews(appVersionLabel)
+        setupLayout()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-            tabBarController?.tabBar.isHidden = true
-        title = "О приложении"
+        tabBarController?.tabBar.isHidden = true
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         tabBarController?.tabBar.isHidden = false
+    }
+    
+    // MARK: - Layout
+    
+    private func setupLayout() {
+        setupAppVersionLabelLayout()
+    }
+    
+    private func setupAppVersionLabelLayout() {
+        NSLayoutConstraint.activate([
+            appVersionLabel.bottomAnchor.constraint(
+                equalTo: view.safeAreaLayoutGuide.bottomAnchor,
+                constant: -LocalConstants.bottomOffset),
+            appVersionLabel.centerXAnchor.constraint(
+                equalTo: view.centerXAnchor)
+        ])
+    }
+    
+    // MARK: - Local Constants
+    
+    private enum LocalConstants {
+        static let bottomOffset: CGFloat = 60
     }
 }
