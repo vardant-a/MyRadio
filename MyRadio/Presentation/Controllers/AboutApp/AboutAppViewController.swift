@@ -13,11 +13,38 @@ final class AboutAppViewController: UIViewController {
     
     private let viewModel: AboutAppViewModelProtocol
     
+    private let appLogoImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.backgroundColor = Colors.ClassicColorSet.acceptColor
+        imageView.clipsToBounds = true
+        
+        return imageView
+    }()
+    
     // MARK: - Private lazy Properties
+    
+    private lazy var appTitleLabel: UILabel = {
+        let label = UILabel()
+        label.text = viewModel.appTitle
+        label.textColor = Colors.ClassicColorSet.secondColor
+        label.font = UIFont.systemFont(ofSize: 18, weight: .bold)
+        
+        return label
+    }()
+    
+    private lazy var appDescriptionLabel: UILabel = {
+        let label = UILabel()
+        label.text = viewModel.appDescription
+        label.textColor = Colors.ClassicColorSet.secondColor
+        label.textAlignment = .center
+        label.numberOfLines = 0
+        
+        return label
+    }()
     
     private lazy var appVersionLabel: UILabel = {
         let label = UILabel()
-        label.text = "Application version - " + viewModel.getAppVersion()
+        label.text = "Application version - " + viewModel.appVersion
         label.font = UIFont.systemFont(ofSize: 13)
         label.textColor = Colors.ClassicColorSet.unselectedColor
         
@@ -41,13 +68,19 @@ final class AboutAppViewController: UIViewController {
         super.viewDidLoad()
         title = "О приложении"
         view.backgroundColor = Colors.ClassicColorSet.backgroundColor
-        view.addSubviews(appVersionLabel)
+        view.addSubviews(appLogoImageView,appTitleLabel,
+                         appDescriptionLabel, appVersionLabel)
         setupLayout()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tabBarController?.tabBar.isHidden = true
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        appLogoImageView.layer.cornerRadius = appLogoImageView.frame.height / 4
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -58,7 +91,48 @@ final class AboutAppViewController: UIViewController {
     // MARK: - Layout
     
     private func setupLayout() {
+        setupAppLogoImageViewLayout()
+        setupAppTitleLabelLayout()
+        setupAppDescriptionLabelLayout()
         setupAppVersionLabelLayout()
+    }
+    
+    private func setupAppLogoImageViewLayout() {
+        NSLayoutConstraint.activate([
+            appLogoImageView.topAnchor.constraint(
+                equalTo: view.safeAreaLayoutGuide.topAnchor,
+                constant: LocalConstants.topOffset),
+            appLogoImageView.centerXAnchor.constraint(
+                equalTo: view.centerXAnchor),
+            appLogoImageView.heightAnchor.constraint(
+                equalToConstant: LocalConstants.imageHeight),
+            appLogoImageView.widthAnchor.constraint(
+                equalToConstant: LocalConstants.imageHeight)
+        ])
+    }
+    
+    private func setupAppTitleLabelLayout() {
+        NSLayoutConstraint.activate([
+            appTitleLabel.topAnchor.constraint(
+                equalTo: appLogoImageView.bottomAnchor,
+                constant: LocalConstants.verticalSpacing),
+            appTitleLabel.centerXAnchor.constraint(
+                equalTo: view.centerXAnchor),
+        ])
+    }
+    
+    private func setupAppDescriptionLabelLayout() {
+        NSLayoutConstraint.activate([
+            appDescriptionLabel.topAnchor.constraint(
+                equalTo: appTitleLabel.bottomAnchor,
+                constant: LocalConstants.verticalSpacing),
+            appDescriptionLabel.leadingAnchor.constraint(
+                equalTo: view.leadingAnchor,
+                constant: LocalConstants.horizontalOffset),
+            appDescriptionLabel.trailingAnchor.constraint(
+                equalTo: view.trailingAnchor,
+                constant: -LocalConstants.horizontalOffset)
+        ])
     }
     
     private func setupAppVersionLabelLayout() {
@@ -74,6 +148,10 @@ final class AboutAppViewController: UIViewController {
     // MARK: - Local Constants
     
     private enum LocalConstants {
+        static let topOffset: CGFloat = 50
         static let bottomOffset: CGFloat = 60
+        static let horizontalOffset: CGFloat = 16
+        static let verticalSpacing: CGFloat = 20
+        static let imageHeight: CGFloat = 100
     }
 }
