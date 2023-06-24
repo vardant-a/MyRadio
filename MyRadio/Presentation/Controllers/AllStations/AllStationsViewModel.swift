@@ -8,7 +8,7 @@
 import UIKit
 
 protocol AllStationsProtocol: AnyObject {
-    
+    func showSelectedStations(_ selectIndex: Int)
 }
 
 final class AllStationsViewModel {
@@ -21,5 +21,12 @@ final class AllStationsViewModel {
     // MARK: - AllStationsViewModel + AllStationsProtocol
 
 extension AllStationsViewModel: AllStationsProtocol {
-    
+    func showSelectedStations(_ selectIndex: Int) {
+        switch selectIndex {
+        case 1:
+            print("all")
+        default:
+            print("favorite")
+        }
+    }
 }

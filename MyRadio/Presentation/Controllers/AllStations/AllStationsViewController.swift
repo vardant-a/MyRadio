@@ -9,7 +9,16 @@ import UIKit
 
 final class AllStationsViewController: UIViewController {
     
-    private var viewModel: AllStationsProtocol
+    // MARK: - Private Properties
+    
+    private let viewModel: AllStationsProtocol
+    
+    // MARK: - Private lazy Properties
+    
+    private lazy var navigationSegmentedView = NavigationSegmentedView(
+        target: self,
+        action: #selector(changedSegmented(_:))
+    )
     
     // MARK: - Init
     
@@ -27,5 +36,26 @@ final class AllStationsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = Colors.ClassicColorSet.backgroundColor
+        view.addSubviews(navigationSegmentedView)
+        setupLayout()
+    }
+    
+    // MARK: - @Objc Methods
+    
+    @objc private func changedSegmented(_ sender: UISegmentedControl) {
+        viewModel.showSelectedStations(sender.selectedSegmentIndex)
+    }
+    
+    // MARK: - Layout
+    
+    private func setupLayout() {
+        NSLayoutConstraint.activate([
+            navigationSegmentedView.topAnchor.constraint(
+                equalTo: view.safeAreaLayoutGuide.topAnchor),
+            navigationSegmentedView.leadingAnchor.constraint(
+                equalTo: view.leadingAnchor),
+            navigationSegmentedView.trailingAnchor.constraint(
+                equalTo: view.trailingAnchor)
+        ])
     }
 }

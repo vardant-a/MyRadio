@@ -36,6 +36,7 @@
 		0E7BA0892A45B8560077241C /* MyRadioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7BA0882A45B8560077241C /* MyRadioTests.swift */; };
 		0E7BA0962A45B9800077241C /* MyRadioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7BA0952A45B9800077241C /* MyRadioUITests.swift */; };
 		0E7BA0982A45B9800077241C /* MyRadioUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7BA0972A45B9800077241C /* MyRadioUITestsLaunchTests.swift */; };
+		0E7BA0A22A4637FF0077241C /* NavigationSegmentedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7BA0A12A4637FF0077241C /* NavigationSegmentedView.swift */; };
 		0E8F8F3C2A3523720009CBF6 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8F8F3B2A3523720009CBF6 /* AppSettings.swift */; };
 		0E8F8F3E2A3527000009CBF6 /* AppStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8F8F3D2A3527000009CBF6 /* AppStyle.swift */; };
 		0EA7D0412A43A91B0036D7DB /* Alers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA7D0402A43A91B0036D7DB /* Alers.swift */; };
@@ -99,6 +100,7 @@
 		0E7BA0932A45B9800077241C /* MyRadioUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyRadioUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E7BA0952A45B9800077241C /* MyRadioUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRadioUITests.swift; sourceTree = "<group>"; };
 		0E7BA0972A45B9800077241C /* MyRadioUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRadioUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0E7BA0A12A4637FF0077241C /* NavigationSegmentedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationSegmentedView.swift; sourceTree = "<group>"; };
 		0E8F8F3B2A3523720009CBF6 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
 		0E8F8F3D2A3527000009CBF6 /* AppStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStyle.swift; sourceTree = "<group>"; };
 		0EA7D0402A43A91B0036D7DB /* Alers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alers.swift; sourceTree = "<group>"; };
@@ -206,18 +208,11 @@
 			children = (
 				0E48CF582A2E9C58009228DF /* Navigation */,
 				0E48CF572A2E9C45009228DF /* Controllers */,
-				0E48CF562A2E9C3E009228DF /* Views */,
+				0E7BA0A02A4637E60077241C /* Views */,
 				0EEFB2502A43A24A00608D6B /* Alerts */,
 				0EEFB24F2A43A1BA00608D6B /* Cells */,
 			);
 			path = Presentation;
-			sourceTree = "<group>";
-		};
-		0E48CF562A2E9C3E009228DF /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		0E48CF572A2E9C45009228DF /* Controllers */ = {
@@ -333,6 +328,14 @@
 				0E7BA0972A45B9800077241C /* MyRadioUITestsLaunchTests.swift */,
 			);
 			path = MyRadioUITests;
+			sourceTree = "<group>";
+		};
+		0E7BA0A02A4637E60077241C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0E7BA0A12A4637FF0077241C /* NavigationSegmentedView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		0EC402AD2A3B486E00DC775B /* Localizable */ = {
@@ -549,6 +552,7 @@
 				0EEFB2462A43960A00608D6B /* AboutAppViewModel.swift in Sources */,
 				0E575C6D2A39021200AA2E82 /* SwitchCellBuilder.swift in Sources */,
 				0EEFB24B2A439DEF00608D6B /* ColorSet.swift in Sources */,
+				0E7BA0A22A4637FF0077241C /* NavigationSegmentedView.swift in Sources */,
 				0E37EF4D2A3F982E00FEF06A /* AboutAppViewController.swift in Sources */,
 				0E8F8F3C2A3523720009CBF6 /* AppSettings.swift in Sources */,
 				0E575C622A38977E00AA2E82 /* CollectionCellBuilder.swift in Sources */,
