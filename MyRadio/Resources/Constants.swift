@@ -9,7 +9,7 @@ import Foundation
 
 enum Constants {
     enum Strings {
-        static var appName: String {
+        static var appTitle: String {
             guard let name = Bundle.main
                 .infoDictionary?["CFBundleName"] as? String else {
                 return "Project X"
@@ -18,7 +18,7 @@ enum Constants {
             return name
         }
         
-        static var versionNumber: String {
+        static var appVersionNumber: String {
             guard let number = Bundle.main
                 .infoDictionary?["CFBundleShortVersionString"] as? String else {
                 return "1.0"
@@ -27,7 +27,7 @@ enum Constants {
             return number
         }
         
-        static var buildNumber: String {
+        static var appBuildNumber: String {
             guard let number = Bundle.main
                 .infoDictionary?["CFBundleVersion"] as? String else {
                 return "1"

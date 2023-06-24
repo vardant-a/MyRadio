@@ -73,7 +73,9 @@ final class SettingsViewController: UIViewController {
     // MARK: - Objc Methods
     
     @objc private func tuppedRightBarButtonItem() {
-        let viewModel = AboutAppViewModel(description: Constants.Strings.self)
+        let viewModel = AboutAppViewModel(
+            description: Constants.Strings.self,
+            localizable: Localizable.self)
         let nextVC = AboutAppViewController(viewModel: viewModel)
         
         navigationController?.show(nextVC, sender: nil)

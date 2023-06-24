@@ -1,5 +1,9 @@
 //
 
+// MARK: - General
+
+"General.appDescription" = "This is an intuitive mobile application that allows users to enjoy live radio broadcasts and diverse audio content from various genres and categories.";
+
 /* ViewController */
 
 "ViewController.radioStationsTitle" = "Radio Stations";

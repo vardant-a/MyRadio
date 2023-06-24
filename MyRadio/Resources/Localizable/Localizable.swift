@@ -50,4 +50,7 @@ enum Localizable {
         static let ocean = NSLocalizedString(
             "ColorSet.oceanTitle", comment: "")
     }
+    
+    static var appDescription = NSLocalizedString(
+        "General.appDescription", comment: "")
 }

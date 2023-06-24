@@ -14,4 +14,27 @@ extension UIView {
             addSubview($0)
         }
     }
+    
+    func addGradientLayer() {
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = self.bounds
+        gradientLayer.cornerRadius = self.bounds.height / 3
+        
+        // Setup point and colors
+        let startColor = UIColor.lightGray.cgColor
+        let endColor = UIColor.darkGray.cgColor
+        gradientLayer.colors = [startColor, endColor]
+        gradientLayer.startPoint = CGPoint(x: 0, y: 0)
+        gradientLayer.endPoint = CGPoint(x: 1, y: 0)
+        
+        // Animation
+        let gradientAnimation = CABasicAnimation(keyPath: "colors")
+        gradientAnimation.fromValue = [startColor, endColor]
+        gradientAnimation.toValue = [endColor, startColor]
+        gradientAnimation.duration = 0.7
+        gradientAnimation.autoreverses = true
+        gradientAnimation.repeatCount = Float.infinity
+        gradientLayer.add(gradientAnimation, forKey: "gradientAnimation")
+        layer.addSublayer(gradientLayer)
+    }
 }
