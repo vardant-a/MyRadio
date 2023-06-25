@@ -15,10 +15,10 @@ extension UIView {
         }
     }
     
-    func addGradientLayer() {
+    func addGradientLayer(_ cornerRadius: CGFloat? = nil) {
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = self.bounds
-        gradientLayer.cornerRadius = self.bounds.height / 3
+        gradientLayer.cornerRadius = cornerRadius ?? 0
         
         // Setup point and colors
         let startColor = UIColor.lightGray.cgColor
@@ -31,7 +31,7 @@ extension UIView {
         let gradientAnimation = CABasicAnimation(keyPath: "colors")
         gradientAnimation.fromValue = [startColor, endColor]
         gradientAnimation.toValue = [endColor, startColor]
-        gradientAnimation.duration = 0.7
+        gradientAnimation.duration = 1.5
         gradientAnimation.autoreverses = true
         gradientAnimation.repeatCount = Float.infinity
         gradientLayer.add(gradientAnimation, forKey: "gradientAnimation")

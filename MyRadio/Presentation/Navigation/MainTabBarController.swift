@@ -12,7 +12,8 @@ final class MainTabBarController: UITabBarController {
     // MARK: - Private Properties
     
     private let allStationsViewController: AllStationsViewController = {
-        let viewModel = AllStationsViewModel()
+        let viewModel = AllStationsViewModel(
+            networkService: Services.networkService)
         let viewController = AllStationsViewController(viewModel: viewModel)
         
         return viewController

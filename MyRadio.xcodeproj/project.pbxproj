@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		0E37EF4D2A3F982E00FEF06A /* AboutAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E37EF4C2A3F982E00FEF06A /* AboutAppViewController.swift */; };
 		0E37EF4F2A3F9AEF00FEF06A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E37EF4E2A3F9AEF00FEF06A /* Constants.swift */; };
+		0E3854802A48744600189859 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E38547F2A48744600189859 /* NetworkError.swift */; };
+		0E3854822A4886A300189859 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3854812A4886A300189859 /* Services.swift */; };
+		0E3854842A488EA100189859 /* StationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3854832A488EA100189859 /* StationCell.swift */; };
+		0E3854862A48975600189859 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3854852A48975600189859 /* Images.swift */; };
 		0E48CF402A2E9861009228DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E48CF3F2A2E9861009228DF /* AppDelegate.swift */; };
 		0E48CF422A2E9861009228DF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E48CF412A2E9861009228DF /* SceneDelegate.swift */; };
 		0E48CF492A2E9862009228DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E48CF482A2E9862009228DF /* Assets.xcassets */; };
@@ -69,6 +73,10 @@
 /* Begin PBXFileReference section */
 		0E37EF4C2A3F982E00FEF06A /* AboutAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutAppViewController.swift; sourceTree = "<group>"; };
 		0E37EF4E2A3F9AEF00FEF06A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		0E38547F2A48744600189859 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		0E3854812A4886A300189859 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
+		0E3854832A488EA100189859 /* StationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationCell.swift; sourceTree = "<group>"; };
+		0E3854852A48975600189859 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		0E48CF3C2A2E9861009228DF /* MyRadio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyRadio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E48CF3F2A2E9861009228DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0E48CF412A2E9861009228DF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -149,6 +157,15 @@
 			path = AboutApp;
 			sourceTree = "<group>";
 		};
+		0E38547E2A48743300189859 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				0EEFB24C2A439F0000608D6B /* NetworkService.swift */,
+				0E38547F2A48744600189859 /* NetworkError.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		0E48CF332A2E9861009228DF = {
 			isa = PBXGroup;
 			children = (
@@ -196,6 +213,7 @@
 			children = (
 				0E48CF682A2EA79A009228DF /* Extensions */,
 				0EC402AD2A3B486E00DC775B /* Localizable */,
+				0E3854852A48975600189859 /* Images.swift */,
 				0E48CF5B2A2E9F15009228DF /* Colors.swift */,
 				0E37EF4E2A3F9AEF00FEF06A /* Constants.swift */,
 				0E48CF482A2E9862009228DF /* Assets.xcassets */,
@@ -254,6 +272,7 @@
 				0E575C6E2A3906F100AA2E82 /* ButtonCell */,
 				0E575C672A389D6A00AA2E82 /* SwitchCell */,
 				0E575C602A38976100AA2E82 /* CollectionCell */,
+				0E3854832A488EA100189859 /* StationCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -369,8 +388,9 @@
 		0EEFB2482A439D5E00608D6B /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				0E38547E2A48743300189859 /* Network */,
 				0E8F8F3B2A3523720009CBF6 /* AppSettings.swift */,
-				0EEFB24C2A439F0000608D6B /* NetworkService.swift */,
+				0E3854812A4886A300189859 /* Services.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -549,6 +569,7 @@
 				0E575C7A2A391DB600AA2E82 /* UIColor+EX.swift in Sources */,
 				0EC402AF2A3B488100DC775B /* Localizable.swift in Sources */,
 				0EEFB24D2A439F0000608D6B /* NetworkService.swift in Sources */,
+				0E3854862A48975600189859 /* Images.swift in Sources */,
 				0EEFB2462A43960A00608D6B /* AboutAppViewModel.swift in Sources */,
 				0E575C6D2A39021200AA2E82 /* SwitchCellBuilder.swift in Sources */,
 				0EEFB24B2A439DEF00608D6B /* ColorSet.swift in Sources */,
@@ -563,12 +584,15 @@
 				0E575C712A39073C00AA2E82 /* ButtonCell.swift in Sources */,
 				0E48CF5F2A2EA1B2009228DF /* SettingsViewController.swift in Sources */,
 				0E8F8F3E2A3527000009CBF6 /* AppStyle.swift in Sources */,
+				0E3854822A4886A300189859 /* Services.swift in Sources */,
 				0E575C822A392C6500AA2E82 /* AllStationsViewModel.swift in Sources */,
 				0E575C7E2A392BC000AA2E82 /* AllStationsViewController.swift in Sources */,
 				0E575C742A3908B500AA2E82 /* ButtonCellBuilder.swift in Sources */,
 				0E575C662A3898A700AA2E82 /* CollectionCell.swift in Sources */,
+				0E3854802A48744600189859 /* NetworkError.swift in Sources */,
 				0E575C802A392C0900AA2E82 /* MusicListViewController.swift in Sources */,
 				0E575C6B2A38FE9400AA2E82 /* SwitchCell.swift in Sources */,
+				0E3854842A488EA100189859 /* StationCell.swift in Sources */,
 				0E48CF632A2EA562009228DF /* SettingsSection.swift in Sources */,
 				0E6F66BF2A399E0F00310F95 /* MainNavigationController.swift in Sources */,
 				0E48CF612A2EA3C1009228DF /* SettingsViewModel.swift in Sources */,
