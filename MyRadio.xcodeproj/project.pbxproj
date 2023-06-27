@@ -225,10 +225,10 @@
 			isa = PBXGroup;
 			children = (
 				0E48CF582A2E9C58009228DF /* Navigation */,
-				0E48CF572A2E9C45009228DF /* Controllers */,
 				0E7BA0A02A4637E60077241C /* Views */,
-				0EEFB2502A43A24A00608D6B /* Alerts */,
 				0EEFB24F2A43A1BA00608D6B /* Cells */,
+				0E48CF572A2E9C45009228DF /* Controllers */,
+				0EEFB2502A43A24A00608D6B /* Alerts */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -240,6 +240,7 @@
 				0E575C7C2A392B3B00AA2E82 /* MusicList */,
 				0E48CF5D2A2EA19C009228DF /* Settings */,
 				0E37EF4B2A3F981000FEF06A /* AboutApp */,
+				0E575C6C2A39021200AA2E82 /* SwitchCellBuilder.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -272,7 +273,6 @@
 				0E575C6E2A3906F100AA2E82 /* ButtonCell */,
 				0E575C672A389D6A00AA2E82 /* SwitchCell */,
 				0E575C602A38976100AA2E82 /* CollectionCell */,
-				0E3854832A488EA100189859 /* StationCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -289,7 +289,6 @@
 		0E575C602A38976100AA2E82 /* CollectionCell */ = {
 			isa = PBXGroup;
 			children = (
-				0E575C612A38977E00AA2E82 /* CollectionCellBuilder.swift */,
 				0E575C652A3898A700AA2E82 /* CollectionCell.swift */,
 				0E575C682A38AE5500AA2E82 /* AppStyleCell.swift */,
 			);
@@ -300,7 +299,7 @@
 			isa = PBXGroup;
 			children = (
 				0E575C6A2A38FE9400AA2E82 /* SwitchCell.swift */,
-				0E575C6C2A39021200AA2E82 /* SwitchCellBuilder.swift */,
+				0E575C612A38977E00AA2E82 /* CollectionCellBuilder.swift */,
 			);
 			path = SwitchCell;
 			sourceTree = "<group>";
@@ -414,6 +413,7 @@
 		0EEFB24F2A43A1BA00608D6B /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				0E3854832A488EA100189859 /* StationCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";

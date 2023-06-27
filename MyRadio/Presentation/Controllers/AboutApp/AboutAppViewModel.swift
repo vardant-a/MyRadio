@@ -20,7 +20,7 @@ final class AboutAppViewModel {
     
     // MARK: - Init
     
-    init(description: Constants.Strings.Type, localizable: Localizable.Type) {
+    init(description: Constants.Strings.Type = Constants.Strings.self, localizable: Localizable.Type = Localizable.self) {
         self.description = description
         self.localizable = localizable
     }

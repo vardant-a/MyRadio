@@ -9,6 +9,8 @@ import UIKit
 
 final class ModelCell: UITableViewCell {
     
+    let newTest = AllStationsViewModel(networkService: NetworkService())
+    
     // MARK: - Init
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {

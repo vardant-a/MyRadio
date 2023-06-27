@@ -13,11 +13,10 @@ final class AllStationsViewController: UIViewController {
     
     private let viewModel: AllStationsProtocol
     
-    private var lineView: UIView = {
-        let view = UIView()
-        view.backgroundColor = Colors.ClassicColorSet.unselectedColor
+    private var collectionViewFlowLayout: UICollectionViewFlowLayout = {
+        let flowLayout = UICollectionViewFlowLayout()
         
-        return view
+        return flowLayout
     }()
     
     // MARK: - Private lazy Properties
@@ -27,27 +26,13 @@ final class AllStationsViewController: UIViewController {
         action: #selector(changedSegmented(_:))
     )
     
-    private lazy var collectionViewFlowLayout: UICollectionViewFlowLayout = {
-        let flowLayout = UICollectionViewFlowLayout()
-        flowLayout.minimumInteritemSpacing = 0
-        flowLayout.minimumLineSpacing = LocalConstants.itemSpacing
-        let width = (400 - (LocalConstants.itemsPerRow - 1) * LocalConstants.itemSpacing) / LocalConstants.itemsPerRow
-        flowLayout.itemSize = CGSize(width: width, height: width * 1.4)
+    private lazy var button: UIButton = {
+        let button = UIButton()
+        button.setTitle("Tup me", for: .normal)
+        button.addTarget(self, action: #selector(tuppedFilterButton), for: .touchUpInside)
+        button.backgroundColor = .black
         
-        return flowLayout
-    }()
-    
-    private lazy var collectionView: UICollectionView = {
-        let collectionView = UICollectionView(
-            frame: .zero,
-            collectionViewLayout: collectionViewFlowLayout)
-        collectionView.backgroundColor = .clear
-        collectionView.register(
-            StationCell.self, forCellWithReuseIdentifier: "ID")
-        collectionView.dataSource = self
-        collectionView.delegate = self
-        
-        return collectionView
+        return button
     }()
     
     // MARK: - Init
@@ -67,7 +52,7 @@ final class AllStationsViewController: UIViewController {
         super.viewDidLoad()
         setupNavigationView()
         view.backgroundColor = Colors.ClassicColorSet.backgroundColor
-        view.addSubviews(navigationSegmentedView, collectionView, lineView)
+        view.addSubviews(navigationSegmentedView, button)
         setupLayout()
     }
     
@@ -113,8 +98,12 @@ final class AllStationsViewController: UIViewController {
     
     private func setupLayout() {
         setupNavigationSegmentedViewLayout()
-        setupCollectionViewLayout()
-        setupLineViewLayout()
+        NSLayoutConstraint.activate([
+            button.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            button.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            button.heightAnchor.constraint(equalToConstant: 44),
+            button.widthAnchor.constraint(equalToConstant: 300)
+        ])
     }
     
     private func setupNavigationSegmentedViewLayout() {
@@ -128,58 +117,12 @@ final class AllStationsViewController: UIViewController {
         ])
     }
     
-    private func setupCollectionViewLayout() {
-        NSLayoutConstraint.activate([
-            collectionView.topAnchor.constraint(
-                equalTo: navigationSegmentedView.bottomAnchor,
-                constant: LocalConstants.topOffset),
-            collectionView.leadingAnchor.constraint(
-                equalTo: view.leadingAnchor),
-            collectionView.trailingAnchor.constraint(
-                equalTo: view.trailingAnchor),
-            collectionView.bottomAnchor.constraint(
-                equalTo: view.safeAreaLayoutGuide.bottomAnchor)
-        ])
-    }
-    
-    private func setupLineViewLayout() {
-        NSLayoutConstraint.activate([
-            lineView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
-            lineView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            lineView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            lineView.heightAnchor.constraint(equalToConstant: 0.7)
-        ])
-    }
-    
     // MARK: - LocalConstants
     
     private enum LocalConstants {
         static let topOffset: CGFloat = 10
         static let itemSpacing: CGFloat = 10
         static let itemsPerRow: CGFloat = 3
+        static let lineHeight: CGFloat = 0.7
     }
-}
-    
-    // MARK: - UICollectionViewDataSource
-
-extension AllStationsViewController: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        21
-        //viewModel.mockData.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView
-            .dequeueReusableCell(withReuseIdentifier: "ID",for: indexPath) as? StationCell else {
-            return UICollectionViewCell()
-        }
-
-        return cell
-    }
-}
-
-    // MARK: - UICollectionViewDelegate
-
-extension AllStationsViewController: UICollectionViewDelegate {
-    
 }
